@@ -1,0 +1,20 @@
+# Robots.txt for Baby Sleep Team
+# https://babysleepteam.rs
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://babysleepteam.rs/sitemap.xml
+
+# Block specific directories if needed (uncomment if necessary)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all crawlers to access CSS and JS for better rendering
+Allow: /css/
+Allow: /scripts/
+Allow: /media/
+
+# Crawl-delay (optional, adjust if needed)
+# Crawl-delay: 1
