@@ -52,6 +52,9 @@
     <meta name="twitter:description" content="Kontaktirajte Baby Sleep Team - sertifikovane savetnike za spavanje. Pošaljite nam poruku ili nas pozovite na +38169 151 70 80. Odgovaramo u roku od 24h." />
     <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
 
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -221,15 +224,21 @@
 
         <section class="contact-form-section">
             <div class="auto-container">
-                <div class="contact-form">
+                <div class="contact-form" id="form-container">
                     <div class="sec-title text-center">
                         <span class="title">Javite nam se!</span>
                         <h2 id="contact-anchor">Pošaljite svoj upit</h2>
                     </div>
+                    
+                    <!-- Error Message Area -->
+                    <div id="form-error" style="display: none; background: #fee; border-left: 4px solid #e53e3e; padding: 15px 20px; margin-bottom: 25px; border-radius: 8px;">
+                        <p style="color: #c53030; margin: 0; font-size: 15px; line-height: 1.5;">
+                            <strong>⚠️ Greška:</strong> <span id="error-message"></span>
+                        </p>
+                    </div>
+                    
                     <form action="https://babysleepteam.rs/kontakt/" enctype="multipart/form-data" id="contact-form"
                         method="post">
-                        <input name="__RequestVerificationToken" type="hidden"
-                            value="888BX9eWYg6VpnBRO51mOsjHyW-tCFRaOzBTjH9Qe0EKTKHR1W8GR866uk1Zr22y6G7pALkALO5lQtDDsLv4PMSeDbcfU_ee83x09Xmqebo1" />
                         <div class="row">
 
                             <input type="text" name="website" style="display:none">
@@ -259,66 +268,176 @@
                             </div>
 
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
-                                <button class="theme-btn btn-style-one" type="submit" name="submit-form">Pošalji
+                                <div class="cf-turnstile" data-sitekey="0x4AAAAAACAPgsD5F8VJWoHS" data-callback="onTurnstileSuccess"></div>
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                                <button class="theme-btn btn-style-one" type="submit" name="submit-form" id="submit-btn" disabled>Pošalji
                                     poruku</button>
                             </div>
                         </div>
-                        <input name="ufprt" type="hidden"
-                            value="FE887438EF1062BF29EF6C27449124E17D5CB2F5125DE9D4670C3EE4E41CAB58F79DE9D093F3FBF1BC77EC33A5C587D73EE8BF99B2B05C0243523A4A03FE6B0C4301F7EE45600237D79A3012043378C4FEC9BB9ACC8E54141C6D14711C91C9D8483B882BBE0F48F644617D0DEEA5B7152BABD8D38EE3C8F92468248D27CCB22A781782C2062109B967DEE325C2E6AD0D" />
                     </form>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" style="display: none;">
+                    <div style="max-width: 600px; margin: 0 auto; text-align: center; padding: 60px 20px;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h2 style="color: #2d3748; font-size: 32px; margin-bottom: 15px; font-weight: 600;">Uspešno poslato!</h2>
+                        <p style="color: #718096; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">Hvala vam što ste nas kontaktirali. Vaša poruka je uspešno primljena i odgovorićemo vam u najkraćem mogućem roku.</p>
+                        <div style="background: #f7fafc; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                            <p style="color: #4a5568; font-size: 16px; margin: 0; line-height: 1.5;">
+                                <strong style="color: #2d3748;">📧 Očekujte odgovor:</strong><br>
+                                Obično odgovaramo u roku od 24 sata radnim danima.
+                            </p>
+                        </div>
+                        <button onclick="window.location.href='index.html'" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px 40px; font-size: 16px; border-radius: 30px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+                            Nazad na početnu
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
         <script>
-            var selectList = document.getElementById('courseSelectList');
-            if (selectList && localStorage.getItem("selectedCourse") == null) {
-                selectList.remove();
+            let turnstileToken = null;
+
+            // Show error message
+            function showError(message) {
+                const errorDiv = document.getElementById('form-error');
+                const errorMsg = document.getElementById('error-message');
+                errorMsg.textContent = message;
+                errorDiv.style.display = 'block';
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
-            else if (selectList) {
-                document.getElementById('SelectedCourse').value = localStorage.getItem("selectedCourse");
+
+            // Hide error message
+            function hideError() {
+                document.getElementById('form-error').style.display = 'none';
             }
-        </script>
 
-        <script>
-            window.onbeforeunload = function (event) {
-                localStorage.removeItem('selectedCourse');
-            };
-        </script>
+            // Validate form fields
+            function validateForm(form) {
+                if (!form.FullName.value.trim()) {
+                    showError('Molimo unesite ime i prezime.');
+                    return false;
+                }
+                if (!form.Email.value.trim()) {
+                    showError('Molimo unesite email adresu.');
+                    return false;
+                }
+                // Basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(form.Email.value.trim())) {
+                    showError('Molimo unesite validnu email adresu.');
+                    return false;
+                }
+                if (!form.PhoneNumber.value.trim()) {
+                    showError('Molimo unesite kontakt telefon.');
+                    return false;
+                }
+                if (!form.Message.value.trim()) {
+                    showError('Molimo unesite vašu poruku.');
+                    return false;
+                }
+                return true;
+            }
 
-        <script>
-            document.getElementById('contact-form').addEventListener('submit', function (e) {
-                e.preventDefault();
 
-                const form = e.target;
-                const data = {
-                    name: form.FullName.value,
-                    email: form.Email.value,
-                    phoneNumber: form.PhoneNumber.value,
-                    subject: form.Subject.value,
-                    message: form.Message.value,
-                    website: form.website.value
-                };
+            // Turnstile callback
+            function onTurnstileSuccess(token) {
+                console.log('Turnstile success, token received');
+                turnstileToken = token;
+                document.getElementById('submit-btn').disabled = false;
+            }
 
-                fetch('https://script.google.com/macros/s/AKfycbz-RZF-qyI_NNjAynedkKRyfpOzFVT03CiGjbVbD9lE0geJ1I1SoVDltcptKKhuWH8/exec', {
-                    method: 'POST',
-                    body: JSON.stringify(data),
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded"
+            // Wait for DOM to be ready
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('DOM loaded, setting up form handler');
+                
+                const contactForm = document.getElementById('contact-form');
+                if (!contactForm) {
+                    console.error('Contact form not found!');
+                    return;
+                }
+
+                contactForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    console.log('Form submitted');
+                    hideError();
+
+                    const form = e.target;
+                    const submitBtn = document.getElementById('submit-btn');
+
+                    // Validate form
+                    if (!validateForm(form)) {
+                        return;
                     }
-                })
-                    .then(res => { 
-                        var a = res.text() 
-                        console.log(a)
-                    })
-                    .then(response => {
-                        alert('Email uspešno poslat!');
-                        form.reset();
-                    })
-                    .catch(error => {
-                        alert('There was an error sending the message.');
-                        console.error(error);
-                    });
+
+                    // Check if turnstile token exists
+                    if (!turnstileToken) {
+                        showError('Molimo vas da završite CAPTCHA proveru.');
+                        return;
+                    }
+
+                    // Disable submit button
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Šaljem...';
+
+                    const formData = {
+                        FullName: form.FullName.value.trim(),
+                        Email: form.Email.value.trim(),
+                        PhoneNumber: form.PhoneNumber.value.trim(),
+                        Subject: form.Subject.value.trim(),
+                        Message: form.Message.value.trim(),
+                        website: form.website.value
+                    };
+
+                    console.log('Sending form data:', formData);
+
+                    try {
+                        const response = await fetch('https://gtnqidketpracvcfsrcr.supabase.co/functions/v1/cloudflare-turnstile', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0bnFpZGtldHByYWN2Y2ZzcmNyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3OTg2MTIsImV4cCI6MjA3ODM3NDYxMn0.29TlwOrN9p15XwmT_8yv8GZYIN50y6dht_LO1Xy_Nds'
+                            },
+                            body: JSON.stringify({
+                                token: turnstileToken,
+                                formData: formData
+                            })
+                        });
+
+                        console.log('Response status:', response.status);
+                        const result = await response.json();
+                        console.log('Response data:', result);
+
+                        if (result.success) {
+                            // Hide form and show success message
+                            document.getElementById('form-container').style.display = 'none';
+                            document.getElementById('success-message').style.display = 'block';
+                            
+                            // Scroll to success message
+                            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            
+                            form.reset();
+                            turnstileToken = null;
+                        } else {
+                            showError(result.message || 'Došlo je do greške. Pokušajte ponovo.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Pošalji poruku';
+                        }
+                    } catch (error) {
+                        console.error('Error:', error);
+                        showError('Došlo je do greške prilikom slanja poruke. Proverite internet konekciju.');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Pošalji poruku';
+                    }
+                });
             });
         </script>
 
