@@ -259,7 +259,7 @@
                             </div>
 
                             <div class="form-group col-lg-6 col-md-12 col-sm-12">
-                                <input id="Subject" name="Subject" placeholder="Naslov" type="text" value="" />
+                                <input id="Subject" name="Subject" placeholder="Naslov" required="required" type="text" value="" />
                             </div>
 
                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -338,6 +338,10 @@
                 }
                 if (!form.PhoneNumber.value.trim()) {
                     showError('Molimo unesite kontakt telefon.');
+                    return false;
+                }
+                if (!form.Subject.value.trim()) {
+                    showError('Molimo unesite naslov.');
                     return false;
                 }
                 if (!form.Message.value.trim()) {
