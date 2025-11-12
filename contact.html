@@ -241,8 +241,6 @@
                         method="post">
                         <div class="row">
 
-                            <input type="text" name="website" style="display:none">
-
                             <div class="form-group col-lg-6 col-md-12 col-sm-12">
                                 <input id="FullName" name="FullName" placeholder="Ime i prezime" required="required"
                                     type="text" value="" />
@@ -398,7 +396,6 @@
                         phone: form.PhoneNumber.value.trim(),
                         title: form.Subject.value.trim(),
                         message: form.Message.value.trim(),
-                        website: form.website.value
                     };
 
                     console.log('Sending form data:', formData);
