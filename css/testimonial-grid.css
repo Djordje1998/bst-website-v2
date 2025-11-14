@@ -264,7 +264,9 @@
     }
     
     .testimonials-grid .testimonial-block .card-image img {
-        height: 350px;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
     }
     
     .testimonials-grid .testimonial-block .card-content {
@@ -303,7 +305,9 @@
     }
     
     .testimonials-grid .testimonial-block .card-image img {
-        height: 300px;
+        height: auto;
+        width: 100%;
+        object-fit: contain;
     }
     
     .testimonials-grid .testimonial-block .card-content {
