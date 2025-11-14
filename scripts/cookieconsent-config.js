@@ -2,9 +2,34 @@
 // Wait for CookieConsent library to load
 window.addEventListener('load', function() {
     if (typeof CookieConsent !== 'undefined') {
+        // Check if consent already given for file:// protocol
+        if (window.location.protocol === 'file:' && localStorage.getItem('cc_cookie_babysleepteam')) {
+            return; // Don't show banner if already consented
+        }
+        // Load Google Analytics only after analytics consent
+        function loadGoogleAnalytics() {
+            if (window.__gaLoaded) return;
+            window.__gaLoaded = true;
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){ dataLayer.push(arguments); }
+            window.gtag = window.gtag || gtag;
+
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KLS5WVCZ0L';
+            s.onload = function(){
+                gtag('js', new Date());
+                gtag('config', 'G-KLS5WVCZ0L');
+            };
+            document.head.appendChild(s);
+        }
+
         CookieConsent.run({
             cookie: {
                 name: 'cc_cookie_babysleepteam',
+                // Use localStorage for file:// protocol
+                useLocalStorage: window.location.protocol === 'file:',
             },
 
             guiOptions: {
@@ -22,14 +47,29 @@ window.addEventListener('load', function() {
 
             onFirstConsent: function() {
                 console.log('Cookie consent - First consent given');
+                // Save to localStorage for file:// protocol
+                if (window.location.protocol === 'file:') {
+                    localStorage.setItem('cc_cookie_babysleepteam', 'true');
+                }
+                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
             },
 
             onConsent: function() {
                 console.log('Cookie consent - Consent updated');
+                // Save to localStorage for file:// protocol
+                if (window.location.protocol === 'file:') {
+                    localStorage.setItem('cc_cookie_babysleepteam', 'true');
+                }
+                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
             },
 
             onChange: function() {
                 console.log('Cookie consent - Preferences changed');
+                // Save to localStorage for file:// protocol
+                if (window.location.protocol === 'file:') {
+                    localStorage.setItem('cc_cookie_babysleepteam', 'true');
+                }
+                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
             },
 
             categories: {
@@ -41,7 +81,7 @@ window.addEventListener('load', function() {
                     autoClear: {
                         cookies: [
                             {
-                                name: /^(_ga|_gid)/
+                                name: /^(\_ga|\_gid)/
                             }
                         ]
                     }
@@ -59,9 +99,9 @@ window.addEventListener('load', function() {
                             acceptAllBtn: 'Prihvati sve',
                             acceptNecessaryBtn: 'Odbij sve',
                             footer: `
-                                <a href="contact.html">Politika kolačića</a>
-                                <a href="contact.html">Politika privatnosti</a>
-                                <a href="contact.html">Uslovi korišćenja</a>
+                                <a href="/kontakt/">Politika kolačića</a>
+                                <a href="/kontakt/">Politika privatnosti</a>
+                                <a href="/kontakt/">Uslovi korišćenja</a>
                             `
                         },
                         preferencesModal: {
@@ -84,7 +124,7 @@ window.addEventListener('load', function() {
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'Više informacija',
-                                    description: 'Za bilo kakva pitanja u vezi sa našom politikom kolačića, molimo vas da nas <a class="cc__link" href="contact.html">kontaktirate</a>.'
+                                    description: 'Za bilo kakva pitanja u vezi sa našom politikom kolačića, molimo vas da nas <a class="cc__link" href="/kontakt/">kontaktirate</a>.'
                                 }
                             ]
                         }
@@ -96,7 +136,7 @@ window.addEventListener('load', function() {
                             acceptAllBtn: 'Accept all',
                             acceptNecessaryBtn: 'Reject all',
                             footer: `
-                                <a href="contact.html">Contact</a>
+                                <a href="/kontakt/">Contact</a>
                             `
                         },
                         preferencesModal: {
@@ -119,7 +159,7 @@ window.addEventListener('load', function() {
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'More information',
-                                    description: 'For any questions regarding our cookie policy, please <a class="cc__link" href="contact.html">contact us</a>.'
+                                    description: 'For any questions regarding our cookie policy, please <a class="cc__link" href="/kontakt/">contact us</a>.'
                                 }
                             ]
                         }
@@ -127,5 +167,7 @@ window.addEventListener('load', function() {
                 }
             }
         });
+        // If user had already consented earlier and this page loads later
+        try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
     }
 });

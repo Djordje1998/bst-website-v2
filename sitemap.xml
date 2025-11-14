@@ -12,7 +12,7 @@
   
   <!-- About Page -->
   <url>
-    <loc>https://babysleepteam.rs/about.html</loc>
+    <loc>https://babysleepteam.rs/o-nama/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -20,7 +20,7 @@
   
   <!-- Contact Page -->
   <url>
-    <loc>https://babysleepteam.rs/contact.html</loc>
+    <loc>https://babysleepteam.rs/kontakt/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -28,7 +28,7 @@
   
   <!-- Gallery Page -->
   <url>
-    <loc>https://babysleepteam.rs/galery.html</loc>
+    <loc>https://babysleepteam.rs/galerija/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -36,7 +36,7 @@
   
   <!-- Blog Main -->
   <url>
-    <loc>https://babysleepteam.rs/blog-main.html</loc>
+    <loc>https://babysleepteam.rs/naucni-kutak/</loc>
     <lastmod>2025-01-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
