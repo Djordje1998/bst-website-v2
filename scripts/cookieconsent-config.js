@@ -17,12 +17,25 @@ window.addEventListener('load', function() {
 
             var s = document.createElement('script');
             s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KLS5WVCZ0L';
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VKCP639T1W';
             s.onload = function(){
                 gtag('js', new Date());
-                gtag('config', 'G-KLS5WVCZ0L');
+                gtag('config', 'G-VKCP639T1W');
             };
             document.head.appendChild(s);
+        }
+
+        // Load PostHog only after analytics consent
+        function loadPostHog() {
+            if (window.__posthogLoaded) return;
+            window.__posthogLoaded = true;
+
+            !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Rr Mr fi Or Ar ci Tr Cr capture Mi calculateEventProperties Lr register register_once register_for_session unregister unregister_for_session Hr getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ur jr createPersonProfile zr kr Br opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Dr debug M Nr getPageViewId captureTraceFeedback captureTraceMetric $r".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+            posthog.init('phc_WLBIv7Ac3Faq5AH2UVRsjW7ttT7phSLW1e5U1azlqup', {
+                api_host: 'https://us.i.posthog.com',
+                defaults: '2025-05-24',
+                person_profiles: 'identified_only'
+            });
         }
 
         CookieConsent.run({
@@ -50,7 +63,12 @@ window.addEventListener('load', function() {
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
                 }
-                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
+                try { 
+                    if (CookieConsent.acceptedCategory('analytics')) { 
+                        loadGoogleAnalytics(); 
+                        loadPostHog();
+                    } 
+                } catch(e) {}
             },
 
             onConsent: function() {
@@ -58,7 +76,12 @@ window.addEventListener('load', function() {
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
                 }
-                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
+                try { 
+                    if (CookieConsent.acceptedCategory('analytics')) { 
+                        loadGoogleAnalytics(); 
+                        loadPostHog();
+                    } 
+                } catch(e) {}
             },
 
             onChange: function() {
@@ -66,7 +89,12 @@ window.addEventListener('load', function() {
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
                 }
-                try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
+                try { 
+                    if (CookieConsent.acceptedCategory('analytics')) { 
+                        loadGoogleAnalytics(); 
+                        loadPostHog();
+                    } 
+                } catch(e) {}
             },
 
             categories: {
@@ -80,6 +108,9 @@ window.addEventListener('load', function() {
                         cookies: [
                             {
                                 name: /^(\_ga|\_gid)/
+                            },
+                            {
+                                name: /^ph_/
                             }
                         ]
                     }
@@ -118,7 +149,7 @@ window.addEventListener('load', function() {
                                     linkedCategory: 'necessary'
                                 }, {
                                     title: 'Analitički kolačići',
-                                    description: 'Analitički kolačići nam pomažu da anonimno razumemo kako roditelji koriste naš sajt, kako bismo unapredili sadržaj i programe spavanja. Koristimo Google Analytics i podatke ne povezujemo sa vašim identitetom.',
+                                    description: 'Analitički kolačići nam pomažu da anonimno razumemo kako roditelji koriste naš sajt, kako bismo unapredili sadržaj i programe spavanja. Koristimo Google Analytics i PostHog i podatke ne povezujemo sa vašim identitetom.',
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'Više informacija',
@@ -153,7 +184,7 @@ window.addEventListener('load', function() {
                                     linkedCategory: 'necessary'
                                 }, {
                                     title: 'Analytics cookies',
-                                    description: 'Analytics cookies help us understand, in an anonymous way, how parents use our website so we can improve our content and sleep programs. We use Google Analytics and do not use this data to identify you.',
+                                    description: 'Analytics cookies help us understand, in an anonymous way, how parents use our website so we can improve our content and sleep programs. We use Google Analytics and PostHog and do not use this data to identify you.',
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'More information',
@@ -166,6 +197,11 @@ window.addEventListener('load', function() {
             }
         });
         // If user had already consented earlier and this page loads later
-        try { if (CookieConsent.acceptedCategory('analytics')) { loadGoogleAnalytics(); } } catch(e) {}
+        try { 
+            if (CookieConsent.acceptedCategory('analytics')) { 
+                loadGoogleAnalytics(); 
+                loadPostHog();
+            } 
+        } catch(e) {}
     }
 });
