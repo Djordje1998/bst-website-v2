@@ -1,20 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Utisci | Baby Sleep Team</title>
-    <meta name="description" content="Pročitajte više od 30 autentičnih utisaka roditelja koji su uz Baby Sleep Team rešili probleme nespavanja kod svoje dece." />
-    <meta name="keywords" content="utisci baby sleep team, iskustva roditelja, uspavane bebe, baby sleep team iskustva" />
-    <meta name="author" content="Baby Sleep Team - Anđela Jerinić" />
+    <title>Utisci | BabySleepTeam</title>
+    <meta name="description" content="Pročitajte više od 30 autentičnih utisaka roditelja koji su uz BabySleepTeam rešili probleme nespavanja kod svoje dece." />
+    <meta name="keywords" content="utisci BabySleepTeam, iskustva roditelja, uspavane bebe, BabySleepTeam iskustva" />
+    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/bootstrap3860.css?v=1" media="print" onload="this.media='all'">
@@ -34,42 +33,96 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Utisci | Baby Sleep Team" />
-    <meta property="og:description" content="Pročitajte iskustva roditelja koji su sa Baby Sleep Team programom postigli mirne noći i nasmejana jutra." />
+    <meta property="og:title" content="Utisci | BabySleepTeam" />
+    <meta property="og:description" content="Pročitajte iskustva roditelja koji su sa BabySleepTeam programom postigli mirne noći i nasmejana jutra." />
     <meta property="og:url" content="https://babysleepteam.rs/utisci/index.html" />
     <meta property="og:image" content="https://babysleepteam.rs/media/4.png" />
     <meta property="og:locale" content="sr_RS" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Utisci | Baby Sleep Team" />
-    <meta name="twitter:description" content="Iskustva roditelja koji su sa Baby Sleep Team programima obezbedili miran san za svoju decu." />
+    <meta name="twitter:title" content="Utisci | BabySleepTeam" />
+    <meta name="twitter:description" content="Iskustva roditelja koji su sa BabySleepTeam programima obezbedili miran san za svoju decu." />
     <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Utisci | Baby Sleep Team",
-    "description": "Iskustva roditelja koji su uz Baby Sleep Team programe postigli miran san.",
-    "url": "https://babysleepteam.rs/utisci/",
-    "provider": {
-       "@type": "LocalBusiness",
-       "name": "Baby Sleep Team",
-       "image": "https://babysleepteam.rs/assets/img/logo.png",
-       "telephone": "+381691517080",
-       "email": "andjelasleeptrainer@gmail.com",
-       "address": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://babysleepteam.rs/#organization",
+          "name": "BabySleepTeam",
+          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+          "url": "https://babysleepteam.rs/",
+          "telephone": "+381691517080",
+          "email": "andjelasleeptrainer@gmail.com",
+          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+          "address": {
             "@type": "PostalAddress",
             "addressLocality": "Belgrade",
             "addressCountry": "RS"
+          },
+          "areaServed": "Worldwide",
+          "sameAs": [
+            "https://www.instagram.com/_babysleepteam_"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381691517080",
+            "contactType": "customer support",
+            "areaServed": "Worldwide",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
         },
-        "areaServed": "Worldwide",
-        "url": "https://babysleepteam.rs"
+        {
+          "@type": "WebSite",
+          "@id": "https://babysleepteam.rs/#website",
+          "url": "https://babysleepteam.rs/",
+          "name": "BabySleepTeam",
+          "inLanguage": "sr-RS",
+          "publisher": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://babysleepteam.rs/#sleep-training-service",
+          "name": "Program spavanja za bebe i decu",
+          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "Baby sleep consulting and online sleep training programs",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://babysleepteam.rs/",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://babysleepteam.rs/utisci/index.html#webpage",
+          "url": "https://babysleepteam.rs/utisci/index.html",
+          "name": "Utisci | BabySleepTeam",
+          "description": "Pročitajte više od 30 autentičnih utisaka roditelja koji su uz BabySleepTeam rešili probleme nespavanja kod svoje dece.",
+          "inLanguage": "sr-RS",
+          "isPartOf": {
+            "@id": "https://babysleepteam.rs/#website"
+          },
+          "about": {
+            "@id": "https://babysleepteam.rs/#sleep-training-service"
+          }
         }
+      ]
     }
-</script>
+    </script>
     
 </head>
 
@@ -82,17 +135,17 @@
                 <div class="container-fluid">
                     <div class="nav-outer clearfix">
                         <ul id="header-contact-sm" class="info-box clearfix">
-                            <li><a style="display:flex" href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
+                            <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
                             <li style="width: 100%;text-align:right"><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                             <li id="insta-header"><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span style="font-size: 1.5em;" class="fab fa-instagram"></span></a></li>
                         </ul>
 
                         <ul id="header-contact-lg" class="info-box clearfix">
-                            <li><a href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
+                            <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
                             <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                         </ul>
 
-                        <div class="responsive-logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo"></a></div>
+                        <div class="responsive-logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
@@ -109,7 +162,7 @@
                                     <li><a href="../index.html">Početna</a></li>
                                     <li><a href="../o-nama/index.html">O nama</a></li>
                                     <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li><a href="../o-nama/index.html#testimonials">Utisci</a></li>
+                                    <li class="current"><a href="index.html">Utisci</a></li>
                                     <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
                                     <li><a href="../galerija/index.html">Galerija</a></li>
                                     <li><a href="../index.html#faq">Česta pitanja</a></li>
@@ -129,13 +182,13 @@
                     <div class="outer-box">
                         <div class="option-box">
                             <ul class="clearfix">
-                                <li class="search-box-btn"><a href="tel:+38169 151 70 80"><span class="icon fas fa-phone"></span></a></li>
+                                <li class="search-box-btn"><a href="tel:+381691517080"><span class="icon fas fa-phone"></span></a></li>
                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span></a></li>
                             </ul>
                         </div>
 
                         <div class="logo-outer">
-                            <div class="logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo"></a></div>
+                            <div class="logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a></div>
                         </div>
 
                         <ul class="social-icon-colored">
@@ -149,7 +202,7 @@
             <div class="sticky-header">
                 <div class="auto-container clearfix">
                     <div class="logo pull-left">
-                        <a href="../index.html" title="Baby Sleep Team"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo"></a>
+                        <a href="../index.html" title="BabySleepTeam"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a>
                     </div>
                     <div class="pull-right">
                         <nav class="main-menu">
@@ -158,7 +211,7 @@
                                     <li><a href="../index.html">Početna</a></li>
                                     <li><a href="../o-nama/index.html">O nama</a></li>
                                     <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li><a href="../o-nama/index.html#testimonials">Utisci</a></li>
+                                    <li class="current"><a href="index.html">Utisci</a></li>
                                     <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
                                     <li><a href="../galerija/index.html">Galerija</a></li>
                                     <li><a href="../index.html#faq">Česta pitanja</a></li>
@@ -190,7 +243,7 @@
             <div class="auto-container">
                 <div class="sec-title text-center">
                     <h2>Više od 30 autentičnih priča</h2>
-                    <p>Roditelji iz Srbije, regiona i dijaspore koji su uz Baby Sleep Team ponovo zavoleli noć i jutro.</p>
+                    <p>Roditelji iz Srbije, regiona i dijaspore koji su uz BabySleepTeam ponovo zavoleli noć i jutro.</p>
                 </div>
 
                 <div class="testimonials-grid">
@@ -489,7 +542,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Draga Andjela, Evo i mi smo jedni od onih koji 2. dan programa ne mozemo doci sebi od promjena. Cure se već većinski samostalno uspavljiju, uz malo ljuljanja kreveta ili lupkanja po guzi ponekad. U šoku smo da drugi dan može biti ovako. Evo i dnevnu drijemku vec spavaju sa 30 minuta nekad do sat i pol sada. Druge bebe nakon samo dva dana. Hvala ti, ne mogu ni zamislit sta nas sve ceka do zadnjeg dana. Ovo je nevjerojatno.❤</div>
+                            <div class="text">Draga Andjela, Evo i mi smo jedni od onih koji 2. dan programa ne mozemo doci sebi od promjena. Cure se već većinski samostalno uspavljiju, uz malo ljuljanja kreveta ili lupkanja po guzi ponekad. U šoku smo da drugi dan može biti ovako. Evo i dnevnu drijemku vec spavaju sa 30 minuta nekad do sat i pol sada. Druge bebe nakon samo dva dana. Hvala ti, ne mogu ni zamislit sta nas sve ceka do zadnjeg dana. Ovo je nevjerojatno.❤️</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Karolina i bliznakinje</h6>
@@ -505,7 +558,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Prvi dan programa smo spavali 3.5 sata preko dana i prvi put spojili 6 sati kroz noć. A još nismo ni krenuli😊</div>
+                            <div class="text">Prvi dan programa smo spavali 3.5 sata preko dana i prvi put spojili 6 sati kroz noć. A još nismo ni krenuli 😊</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Marija i beba Vuk 7 meseci</h6>
@@ -521,7 +574,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Evo ti ga lajv, zaspala u 19h, mi u sobi gledamo film🍿🍺Ne strepim vise da cu da trcim u sobu svaki cas i ono sto je najvaznije dremke su nam sat-dva, odvali i preko, vise nema onih od 30-40min i to mi je iskreno najveci spas jer nam noc ni pre nije bila kriticna kao dan! Stizem sve kao influenserka, znaci kuca sredjena, rucak skuvan, ves prostrem, sve za jednu njenu dremku😂 za drugu sredim sebe, posle ona spava ja odmaram i bombonica. Ovo je resenje. Hvala ti! 😊</div>
+                            <div class="text">Evo ti ga lajv, zaspala u 19h, mi u sobi gledamo film🍿🍺 Ne strepim vise da cu da trcim u sobu svaki cas i ono sto je najvaznije dremke su nam sat-dva, odvali i preko, vise nema onih od 30-40min i to mi je iskreno najveci spas jer nam noc ni pre nije bila kriticna kao dan! Stizem sve kao influenserka, znaci kuca sredjena, rucak skuvan, ves prostrem, sve za jednu njenu dremku😂 za drugu sredim sebe, posle ona spava ja odmaram i bombonica. Ovo je resenje. Hvala ti! 😊</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Ana i beba Petra ( mesec dana)</h6>
@@ -553,7 +606,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Spavamo 11-12 sati i jos jedno 3 sata dnevno, vise spava nego sto je budna😂Ovo je preporod! Hvala!</div>
+                            <div class="text">Spavamo 11-12 sati i jos jedno 3 sata dnevno, vise spava nego sto je budna 😂 Ovo je preporod! Hvala!</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Stefana i beba Mila (12 meseci)</h6>
@@ -569,7 +622,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Ježim se kad kažu “ Pa to je normalno”. Izvinite ali meni nije. Dete ne spava, dete plače, dete bira šta će da jede, dete se ne igra kao pre, dete nije motivisano da istražuje šta sve može. Ja nervozna do neprepoznatljivosti. Sve što ne želim sam videla na sebi. Alarm za rešenje. Našla i rešavamo! Spava celu noć. Spava danju. Može i treba! Hvala ti na spasu💗💗💗</div>
+                            <div class="text">Ježim se kad kažu "Pa to je normalno". Izvinite ali meni nije. Dete ne spava, dete plače, dete bira šta će da jede, dete se ne igra kao pre, dete nije motivisano da istražuje šta sve može. Ja nervozna do neprepoznatljivosti. Sve što ne želim sam videla na sebi. Alarm za rešenje. Našla i rešavamo! Spava celu noć. Spava danju. Može i treba! Hvala ti na spasu💗💗💗</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Marija i beba Naum (8 meseci)</h6>
@@ -585,7 +638,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text">Draga Andjela,  Jako sam ti zahvalna na svoj pomoci i svim savetima, usrecila si jednu jako iscrpljenu mamu. Nisam mogla da verujem da ce moj mali nauciti da spava sam, a sada su se moji snovi ostvarili, i ovo je najbolji Bozicni poklon ikada! Za ove dve nedelje ne samo sto smo poceli da spavamo citavu noc, nego smo i izbacili ljuljanje, nosanje, treskanje i cuclu. Neopisivo je veliko olaksanje to sto ne moram vise da ga uspavljuljem, nego samo mogu da uzivam u tome sto je naucio da sam sebe uspava 🙏✨ Hvala ti na strpljenju, razumevanju i ogromnoj podrsci koju si mi pruzila tokom ovog perioda, jako sam srecna sto sam dosla do tebe ❤</div>
+                            <div class="text">Draga Andjela,  Jako sam ti zahvalna na svoj pomoci i svim savetima, usrecila si jednu jako iscrpljenu mamu. Nisam mogla da verujem da ce moj mali nauciti da spava sam, a sada su se moji snovi ostvarili, i ovo je najbolji Bozicni poklon ikada! Za ove dve nedelje ne samo sto smo poceli da spavamo citavu noc, nego smo i izbacili ljuljanje, nosanje, treskanje i cuclu. Neopisivo je veliko olaksanje to sto ne moram vise da ga uspavljuljem, nego samo mogu da uzivam u tome sto je naucio da sam sebe uspava 🙏✨ Hvala ti na strpljenju, razumevanju i ogromnoj podrsci koju si mi pruzila tokom ovog perioda, jako sam srecna sto sam dosla do tebe ❤️</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Nina i beba Teo 5 meseci</h6>
@@ -601,7 +654,7 @@
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
-                            <div class="text"> Andjela, mi smo uspeli. 😁 ona sad cak i nece da se uspava u rukama, tacno trazi da je spustim u krevetac. I dalje se za dnevne dremke po nekad malo "buni" ali to je kratko i brzo se bas uspava. 🥰 Sve u svemu spava 11-12 sati nocu bez budjenja i mi smo presrecni. Za drugu bebu ti se javljamo na vreme😅❤️</div>
+                            <div class="text"> Andjela, mi smo uspeli. 😁 ona sad cak i nece da se uspava u rukama, tacno trazi da je spustim u krevetac. I dalje se za dnevne dremke po nekad malo "buni" ali to je kratko i brzo se bas uspava. 🥰 Sve u svemu spava 11-12 sati nocu bez budjenja i mi smo presrecni. Za drugu bebu ti se javljamo na vreme 😅❤️</div>
                             <div class="card-footer">
                                 <div class="author-info">
                                     <h6 class="name">Mama Marija i beba Angelina (9 meseci)</h6>
@@ -636,7 +689,7 @@
                                 <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
-                                            <a href="../index.html"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo" /></a>
+                                            <a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo" /></a>
                                         </div>
                                         <div class="text">Dobar san predstavlja osnov psihičkog i fizičkog zdravlja svakog čoveka a naročito beba. Kroz personalizovani rad sa vama i vašim detetom za samo dve nedelje dovodimo spavanje vaše bebe u savršen red.</div>
                                     </div>
@@ -665,7 +718,7 @@
                                         <h4 class="widget-title">Kontakt</h4>
                                         <div class="widget-content">
                                             <ul class="contact-info">
-                                                <li><a href="tel:+38169 151 70 80"><span class="fa fa-phone-square"></span>Anđela: +38169 151 70 80</a></li>
+                                                <li><a href="tel:+381691517080"><span class="fa fa-phone-square"></span>Anđela: +38169 151 70 80</a></li>
                                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                                             </ul>
                                         </div>
@@ -689,7 +742,7 @@
                     <ul class="social-icon-colored">
                         <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
                     </ul>
-                    <div class="copyright">Copyright &copy; 2025 Baby Sleep Team</div>
+                    <div class="copyright">Copyright &copy; 2025 BabySleepTeam</div>
                 </div>
             </div>
         </footer>
@@ -742,3 +795,4 @@
 </body>
 
 </html>
+

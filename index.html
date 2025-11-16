@@ -1,23 +1,20 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Početna | Baby Sleep Team</title>
+    <title>Početna | BabySleepTeam</title>
 
     <meta name="description"
         content="Kroz personalizovani rad sa Vama i Vašim detetom za samo dve nedelje dovodimo spavanje Vaše bebe u savršen red a Vama vraćamo izgubljen kvalitet života!" />
     <meta name="keywords"
         content="baby sleep training, sleep consultant Serbia, bebe spavanje, sleep trening, bebe nespavanje, kako da beba spava" />
-    <meta name="author" content="Baby Sleep Team - Anđela Jerinić" />
+    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
 
     <!-- Preload critical image -->
     <link rel="preload" href="media/smiling-baby-lying-bed.jpg" as="image">
@@ -38,7 +35,7 @@
     <link rel="canonical" href="https://babysleepteam.rs/" />
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Baby Sleep Team" />
+    <meta property="og:title" content="BabySleepTeam" />
     <meta property="og:description"
         content="Kroz personalizovani rad sa Vama i Vašim detetom za samo dve nedelje dovodimo spavanje Vaše bebe u savršen red a Vama vraćamo izgubljen kvalitet života!" />
     <meta property="og:url" content="https://babysleepteam.rs/" />
@@ -47,7 +44,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Baby Sleep Team" />
+    <meta name="twitter:title" content="BabySleepTeam" />
     <meta name="twitter:description"
         content="Kroz personalizovani rad sa Vama i Vašim detetom za samo dve nedelje dovodimo spavanje Vaše bebe u savršen red a Vama vraćamo izgubljen kvalitet života!" />
     <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
@@ -57,20 +54,77 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Baby Sleep Team",
-      "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
-      "url": "https://babysleepteam.rs/",
-      "telephone": "+381691517080",
-      "email": "andjelasleeptrainer@gmail.com",
-      "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "RS"
-      },
-      "priceRange": "$$",
-      "sameAs": [
-        "https://www.instagram.com/_babysleepteam_"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://babysleepteam.rs/#organization",
+          "name": "BabySleepTeam",
+          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+          "url": "https://babysleepteam.rs/",
+          "telephone": "+381691517080",
+          "email": "andjelasleeptrainer@gmail.com",
+          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+          },
+          "areaServed": "Worldwide",
+          "sameAs": [
+            "https://www.instagram.com/_babysleepteam_"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381691517080",
+            "contactType": "customer support",
+            "areaServed": "Worldwide",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://babysleepteam.rs/#website",
+          "url": "https://babysleepteam.rs/",
+          "name": "BabySleepTeam",
+          "inLanguage": "sr-RS",
+          "publisher": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://babysleepteam.rs/#sleep-training-service",
+          "name": "Program spavanja za bebe i decu",
+          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "Baby sleep consulting and online sleep training programs",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://babysleepteam.rs/",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://babysleepteam.rs/#webpage",
+          "url": "https://babysleepteam.rs/",
+          "name": "Početna | BabySleepTeam",
+          "description": "Kroz personalizovani rad sa Vama i Vašim detetom za samo dve nedelje dovodimo spavanje Vaše bebe u savršen red a Vama vraćamo izgubljen kvalitet života!",
+          "inLanguage": "sr-RS",
+          "isPartOf": {
+            "@id": "https://babysleepteam.rs/#website"
+          },
+          "about": {
+            "@id": "https://babysleepteam.rs/#sleep-training-service"
+          }
+        }
       ]
     }
     </script>
@@ -78,6 +132,10 @@
 </head>
 
 <body>
+
+    <h1 style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
+        BabySleepTeam | Program spavanja za bebe i decu
+    </h1>
 
     <div class="page-wrapper">
         <!-- Main Header -->
@@ -88,7 +146,7 @@
                     <div class="nav-outer clearfix">
 
                         <ul id="header-contact-sm" class="info-box clearfix">
-                            <li><a style="display:flex" href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li style="width: 100%;text-align:right"><a
                                     href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -99,14 +157,14 @@
                         </ul>
 
                         <ul id="header-contact-lg" class="info-box clearfix">
-                            <li><a href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
                                         class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                         </ul>
 
                         <div class="responsive-logo"><a href="index.html"><img src="media/logo-aneta.jpg"
-                                    alt="Baby Sleep Team Logo"></a></div>
+                                    alt="BabySleepTeam Logo"></a></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
@@ -121,7 +179,7 @@
 
                             <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Početna</a></li>
+                                    <li class="current"><a href="index.html">Početna</a></li>
                                     <li><a href="o-nama/index.html">O nama</a></li>
                                     <li><a href="index.html#programs">Usluge</a></li>
                                     <li><a href="o-nama/index.html#testimonials">Utisci</a></li>
@@ -145,7 +203,7 @@
                         <!-- Option Box -->
                         <div class="option-box">
                             <ul class="clearfix">
-                                <li class="search-box-btn"><a href="tel:+38169 151 70 80"><span
+                                <li class="search-box-btn"><a href="tel:+381691517080"><span
                                             class="icon fas fa-phone"></span></a></li>
                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
                                             class="fa fa-envelope"></span></a></li>
@@ -155,7 +213,7 @@
                         <!--Logo-->
                         <div class="logo-outer">
                             <div class="logo"><a href="index.html"><img src="media/logo-aneta.jpg"
-                                        alt="Baby Sleep Team Logo"></a>
+                                        alt="BabySleepTeam Logo"></a>
                             </div>
                         </div>
 
@@ -174,8 +232,8 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" title="Baby Sleep Team"><img src="media/logo-aneta.jpg"
-                                alt="Baby Sleep Team Logo"></a>
+                        <a href="index.html" title="BabySleepTeam"><img src="media/logo-aneta.jpg"
+                                alt="BabySleepTeam Logo"></a>
                     </div>
                     <!--Right Col-->
                     <div class="pull-right">
@@ -183,7 +241,7 @@
                         <nav class="main-menu">
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="index.html">Početna</a></li>
+                                    <li class="current"><a href="index.html">Početna</a></li>
                                     <li><a href="o-nama/index.html">O nama</a></li>
                                     <li><a href="index.html#programs">Usluge</a></li>
                                     <li><a href="o-nama/index.html#testimonials">Utisci</a></li>
@@ -224,7 +282,7 @@
                             data-rotate="0" data-saveperformance="off" data-slotamount="default"
                             data-thumb="media/smiling-baby-lying-bed.jpg">
 
-                            <img alt="Smiling baby lying on bed - Baby Sleep Team" class="rev-slidebg"
+                            <img alt="Smiling baby lying on bed - BabySleepTeam" class="rev-slidebg"
                                 data-bgfit="cover" data-bgparallax="10" data-bgposition="center center"
                                 data-bgrepeat="no-repeat" data-no-retina="" src="media/smiling-baby-lying-bed.jpg">
 
@@ -235,7 +293,7 @@
                                 data-hoffset="['30','15','15','15']" data-voffset="['140','0','0','0']"
                                 data-x="['left','left','left','left']" data-y="['top','top','top','top']"
                                 data-textalign="['top','top','top','top']"
-                                data-frames='[{"delay":800,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                                data-frames='[{"delay":800,"speed":500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="icon icon-sun"></span>
                             </div>
 
@@ -247,7 +305,7 @@
                                 data-x="['right','right','right','right']"
                                 data-y="['bottom','bottom','bottom','bottom']"
                                 data-textalign="['top','top','top','top']"
-                                data-frames='[{"delay":1400,"speed":600,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
+                                data-frames='[{"delay":1400,"speed":800,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'>
                                 <span class="icon icon-rainbow"></span>
                             </div>
 
@@ -291,44 +349,44 @@
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="height: 88px;" src="media/untitled-3.jpg"
-                                alt="TV RTS - Baby Sleep Team gostovanje">
+                                alt="TV RTS - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="height: 82.88px" src="media/studio-b-logo-p.jpg"
-                                alt="Studio B - Baby Sleep Team gostovanje">
+                                alt="Studio B - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="margin-top: 10px;height: 58px;" src="media/k1_studio_logo.png"
-                                alt="K1 Studio - Baby Sleep Team gostovanje">
+                                alt="K1 Studio - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="margin-top: 6px;height: 70px;" src="media/channels4_profile.jpg"
-                                alt="TV gostovanje - Baby Sleep Team">
+                                alt="TV gostovanje - BabySleepTeam" loading="lazy">
                         </div>
                     </div>
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="padding-right: 26px;height:82px" src="media/untitled-2.jpg"
-                                alt="TV B92 - Baby Sleep Team gostovanje">
+                                alt="TV B92 - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
 
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="margin-top: 27px;height:45px" src="media/untitled-11.jpg"
-                                alt="TV Happy - Baby Sleep Team gostovanje">
+                                alt="TV Happy - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
                     <div class="offer-block tv-station">
                         <div class="inner-box">
                             <img style="height: 74px;" src="media/rtk_logo-300x149.png"
-                                alt="RTK - Baby Sleep Team gostovanje">
+                                alt="RTK - BabySleepTeam gostovanje" loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -377,46 +435,46 @@
                                         <div class="slider" style="display: flex; transition: transform 1s ease-in-out;
                                             height: 100%; width: 100%;">
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/screenshot_75.jpg);"></div>
+                                                style="background-image: url(media/testimonial/testimonial_1.jpg);"></div>
                                             <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/screenshot-2024-02-29-at-11-55-15.png);">
+                                                style="background-image: url(media/testimonial/testimonial_2.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-bfb0070d9dcbc82adfcbbabb9a23fd06bb6594fe63b784a01895f09a94904c01_dc140e8ec1cf53c4.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_3.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-c4e026bbffb664dfb94da240fd38db3283692ea601f14a8cdeb11da60381d65e_cb759860493e9508.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_4.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-ff96c2b1fa814631a645636319fa9d6c1e1f47a2374ece3c3b5334ded81975ef_2c3304bcd32b2041.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_5.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-2e70e7fbe9dcd42be45eeb01a9de2f12140f6b4e623520b3ec4898ea6f544070_2d3c14288bb0d82a.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_6.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-dcb3a6a7d69b527dfd771ef3e8d185444f8f0fdea97631e03e84c6f32b95a84d_d93d8b4fea679290.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_7.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/0-02-05-6d3dfc6f8404985a9cc6a76681d320000b54aa4a7ed02a68eba06e7e849f642e_6cf6044600b0e7a1.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_8.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/screenshot-2024-05-04-at-14-27-15.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_9.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/screenshot-2024-05-04-at-14-34-25.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_10.jpg);">
                                             </div> <!-- -->
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/img12334.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_11.jpg);">
                                             </div>
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/09.01.50_96ee39ed.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_12.jpg);">
                                             </div>
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/09.09.55_c1fbe63f.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_13.jpg);">
                                             </div>
                                             <div class="circular-image-container slide"
-                                                style="background-image: url(media/WhatsApp16.17.12_9f3f2413.jpg);">
+                                                style="background-image: url(media/testimonial/testimonial_14.jpg);">
                                             </div>
                                         </div>
                                     </div>
@@ -670,7 +728,7 @@
                                 </tr>
                                 <tr>
                                     <td style="cursor: pointer" data-toggle="tooltip" data-placement="bottom" title="">
-                                        3 dana praćenja i odgovaranja na sva pitanja
+                                        3 dana pracÌenja i odgovaranja na sva pitanja
                                     </td>
                                     <td>
 
@@ -720,7 +778,7 @@
                                 </tr>
                                 <tr>
                                     <td style="cursor: pointer" data-toggle="tooltip" data-placement="bottom" title="">
-                                        Svakodnevna komunikacija i praćenje
+                                        Svakodnevna komunikacija i pracÌenje
                                     </td>
                                     <td>
 
@@ -802,7 +860,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    3 dana praćenja i odgovaranja na sva pitanja
+                                                    3 dana pracÌenja i odgovaranja na sva pitanja
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -818,7 +876,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    Svakodnevna komunikacija i praćenje
+                                                    Svakodnevna komunikacija i pracÌenje
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -884,7 +942,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    3 dana praćenja i odgovaranja na sva pitanja
+                                                    3 dana pracÌenja i odgovaranja na sva pitanja
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -900,7 +958,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    Svakodnevna komunikacija i praćenje
+                                                    Svakodnevna komunikacija i pracÌenje
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -966,7 +1024,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    3 dana praćenja i odgovaranja na sva pitanja
+                                                    3 dana pracÌenja i odgovaranja na sva pitanja
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -982,7 +1040,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    Svakodnevna komunikacija i praćenje
+                                                    Svakodnevna komunikacija i pracÌenje
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -1048,7 +1106,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    3 dana praćenja i odgovaranja na sva pitanja
+                                                    3 dana pracÌenja i odgovaranja na sva pitanja
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-check table-symbol" style="color: green;"></i>
@@ -1064,7 +1122,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    Svakodnevna komunikacija i praćenje
+                                                    Svakodnevna komunikacija i pracÌenje
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-times-circle table-symbol" style="color: red;"></i>
@@ -1130,7 +1188,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    3 dana praćenja i odgovaranja na sva pitanja
+                                                    3 dana pracÌenja i odgovaranja na sva pitanja
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-check table-symbol" style="color: green;"></i>
@@ -1146,7 +1204,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    Svakodnevna komunikacija i praćenje
+                                                    Svakodnevna komunikacija i pracÌenje
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-check table-symbol" style="color: green;"></i>
@@ -1352,20 +1410,10 @@
                     <div id="b73942e4-a00e-462c-abd3-29d02bd2b47a" class="collapse" aria-labelledby="1308"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            <!DOCTYPE html>
-                            <html>
-
-                            <head>
-                            </head>
-
-                            <body>
-                                <p style="text-align: justify;">Sa programom spavanja možete početi u bilo kom trenutku,
-                                    jer smo obučeni za rad sa bebama <strong>od 1. dana života do 7. godine</strong> a
-                                    za prvu prespavanu
-                                    noć nikad nije ni rano ni kasno.</p>
-                            </body>
-
-                            </html>
+                            <p style="text-align: justify;">Sa programom spavanja možete početi u bilo kom trenutku,
+                                jer smo obučeni za rad sa bebama <strong>od 1. dana života do 7. godine</strong> a
+                                za prvu prespavanu
+                                noć nikad nije ni rano ni kasno.</p>
                         </div>
                     </div>
                 </div>
@@ -1383,28 +1431,18 @@
                     <div id="c054d64a-f10f-44a6-8032-48c299e166d6" class="collapse" aria-labelledby="1309"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            <!DOCTYPE html>
-                            <html>
-
-                            <head>
-                            </head>
-
-                            <body>
-                                <p>Program spavanja je delotvoran kod sledećih problema:</p>
-                                <ol>
-                                    <li>Česta noćna buđenja.</li>
-                                    <li>Loš, kratak ili nikakav dnevni san.</li>
-                                    <li>Kasno večernje lezanje.</li>
-                                    <li>Rano ustajanje.</li>
-                                    <li>Premor.</li>
-                                    <li>Izbegavanje odlaska u krevet.</li>
-                                    <li>Noćne more, noćni terori, buđenja u plaču i Elpenorovog sidrom.</li>
-                                    <li>Svi drugi oblici lošeg sna kod dece i beba starosti od 4 meseca do 7 godina.
-                                    </li>
-                                </ol>
-                            </body>
-
-                            </html>
+                            <p>Program spavanja je delotvoran kod sledećih problema:</p>
+                            <ol>
+                                <li>Česta noćna buđenja.</li>
+                                <li>Loš, kratak ili nikakav dnevni san.</li>
+                                <li>Kasno večernje lezanje.</li>
+                                <li>Rano ustajanje.</li>
+                                <li>Premor.</li>
+                                <li>Izbegavanje odlaska u krevet.</li>
+                                <li>Noćne more, noćni terori, buđenja u plaču i Elpenorovog sidrom.</li>
+                                <li>Svi drugi oblici lošeg sna kod dece i beba starosti od 4 meseca do 7 godina.
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -1422,24 +1460,14 @@
                     <div id="47c36c26-dfa1-4967-9229-767b19706e55" class="collapse" aria-labelledby="1310"
                         data-parent="#accordionExample">
                         <div class="card-body">
-                            <!DOCTYPE html>
-                            <html>
-
-                            <head>
-                            </head>
-
-                            <body>
-                                <p style="text-align: justify;">Program spavanja je delotvoran kod <strong>95%
-                                        dece</strong>. Iako većina roditelja veruje da njihovom detetu „nema pomoći“ jer
-                                    je „drugačije“, „treba mu manje sna“ ili je jednostavno „takvo od rođenja“ i sigurno
-                                    ima neki „medicinski problem“, šanse da je zaista tako su <strong>vrlo
-                                        male</strong>. Rezultati 52 naučne studije pokazuju da je program spavanja
-                                    delotvoran kod 95% dece i beba, te da nisu potrebni nikakvi lekovi niti veće
-                                    intervencije da biste kod deteta videli značajne promene i potpuno poboljšanje sna.
-                                     </p>
-                            </body>
-
-                            </html>
+                            <p style="text-align: justify;">Program spavanja je delotvoran kod <strong>95%
+                                    dece</strong>. Iako većina roditelja veruje da njihovom detetu "nema pomoći" jer
+                                je "drugačije", "treba mu manje sna" ili je jednostavno "takvo od rođenja" i sigurno
+                                ima neki "medicinski problem", šanse da je zaista tako su <strong>vrlo
+                                    male</strong>. Rezultati 52 naučne studije pokazuju da je program spavanja
+                                delotvoran kod 95% dece i beba, te da nisu potrebni nikakvi lekovi niti veće
+                                intervencije da biste kod deteta videli značajne promene i potpuno poboljšanje sna.
+                                 </p>
                         </div>
                     </div>
                 </div>
@@ -1484,7 +1512,7 @@
                                 se beba ostavi sama da plače sve dok ne zaspi. Nasuprot tome, tokom programa
                                 spavanje bebi se novine uvode postepeno dok se na naredne korake ne prelazi sve dok
                                 svi prethodni nisu dobro usvojeni. Na ovaj način osiguravamo da je dete zaista
-                                stiglo da „svari“ ceo proces i trajno usvoji dobre navike spavanja.</p>
+                                stiglo da "svari" ceo proces i trajno usvoji dobre navike spavanja.</p>
                         </div>
                     </div>
                 </div>
@@ -1599,7 +1627,7 @@
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
                                             <a href="index.html"><img src="media/logo-aneta.jpg"
-                                                    alt="Baby Sleep Team Logo" /></a>
+                                                    alt="BabySleepTeam Logo" /></a>
                                         </div>
                                         <div class="text">Dobar san predstavlja osnov psihičkog i fizičkog zdravlja
                                             svakog čoveka a naročito beba. Kroz personalizovani rad sa Vama i Vašim
@@ -1634,7 +1662,7 @@
                                         <h4 class="widget-title">Kontakt</h4>
                                         <div class="widget-content">
                                             <ul class="contact-info">
-                                                <li><a href="tel:+38169 151 70 80"><span
+                                                <li><a href="tel:+381691517080"><span
                                                             class="fa fa-phone-square"></span>Anđela: +38169 151 70
                                                         80</a></li>
                                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -1646,12 +1674,12 @@
                                         <h4 class="widget-title pt-3">Sertifikati</h4>
 
 
-                                        <a href="media/img/andjela-jerini%c4%87-cpd-certificate.png" target="_blank"
+                                        <a href="media/img/andjela-jerini%c4%87-cpd-certificate.png" target="_blank" rel="noopener noreferrer"
                                             class="p-3">
                                             <i class="fa fa-file-pdf fa-2x"></i>
                                         </a>
                                         <a href="media/img/andjela-jerini%c4%87-sleep-nanny-academy-certificate-1.png"
-                                            target="_blank" class="p-3">
+                                            target="_blank" rel="noopener noreferrer" class="p-3">
                                             <i class="fa fa-file-pdf fa-2x"></i>
                                         </a>
                                     </div>
@@ -1669,7 +1697,7 @@
                                 aria-label="Instagram"><span class="fab fa-instagram"></span></a>
                         </li>
                     </ul>
-                    <div class="copyright"> Copyright &copy; 2025 Baby Sleep Team</div>
+                    <div class="copyright"> Copyright &copy; 2025 BabySleepTeam</div>
                 </div>
             </div>
         </footer>

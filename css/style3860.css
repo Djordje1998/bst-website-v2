@@ -63,23 +63,45 @@ font-family: 'TitanOne', cursive;
 @import url('fontawesome-all.css');
 @import url('animate.css');
 @import url('flaticon.css');
-@import url('owl.css');
 @import url('jquery-ui.css');
 @import url('jquery.fancybox.min.css');
 
 @font-face {
   font-family: 'TitanOne';
   src: url('fonts/TitanOne-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Grandstander-Regular';
   src: url('fonts/Grandstander-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'VarelaRound-Regular';
   src: url('fonts/VarelaRound-Regular.ttf');
+  font-display: swap;
+}
+
+#cc-main{
+  --cc-font-family: 'VarelaRound-Regular', -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !important;
+  --cc-btn-primary-bg: #ff4880 !important;
+  --cc-btn-primary-border-color: #ff4880 !important;
+  --cc-btn-primary-hover-bg: #ffae00 !important;
+  --cc-btn-primary-hover-border-color: #ffae00 !important;
+  --cc-toggle-on-bg: #ff4880 !important;
+  --cc-btn-border-radius: 50px !important;
+}
+
+#cc-main .cm__footer{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+}
+
+#cc-main .cm__footer a{
+	white-space: nowrap;
 }
 
 /*** 
@@ -1850,6 +1872,10 @@ img{
 
 .main-slider .link-box a{
 	position: relative;
+}
+.main-slider .tparrows,
+.main-slider .tp-bullets{
+	display: none !important;
 }
 
 .icon-sun{

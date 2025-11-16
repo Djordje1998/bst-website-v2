@@ -10,7 +10,7 @@ Disallow: /
 
 
 
-# Robots.txt for Baby Sleep Team
+# Robots.txt for BabySleepTeam
 # https://babysleepteam.rs
 
 ### User-agent: *

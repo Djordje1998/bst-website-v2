@@ -1,19 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>O nama | Baby Sleep Team</title>
-    <meta name="description" content="Upoznajte Baby Sleep Team - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece. Naša priča, naš tim i naši sertifikati." />
+    <title>O nama | BabySleepTeam</title>
+    <meta name="description" content="Upoznajte BabySleepTeam - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece. Naša priča, naš tim i naši sertifikati." />
     <meta name="keywords" content="baby sleep consultant, sleep training expert, sertifikovani savetnik za spavanje, Anđela Jerinić, sleep trening Srbija" />
-    <meta name="author" content="Baby Sleep Team - Anđela Jerinić" />
+    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/bootstrap3860.css?v=1" media="print" onload="this.media='all'">
@@ -32,16 +31,16 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="O nama | Baby Sleep Team" />
-    <meta property="og:description" content="Upoznajte Baby Sleep Team - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece. Naša priča, naš tim i naši sertifikati." />
+    <meta property="og:title" content="O nama | BabySleepTeam" />
+    <meta property="og:description" content="Upoznajte BabySleepTeam - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece. Naša priča, naš tim i naši sertifikati." />
     <meta property="og:url" content="https://babysleepteam.rs/o-nama/" />
     <meta property="og:image" content="https://babysleepteam.rs/media/4.png" />
     <meta property="og:locale" content="sr_RS" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="O nama | Baby Sleep Team" />
-    <meta name="twitter:description" content="Upoznajte Baby Sleep Team - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece." />
+    <meta name="twitter:title" content="O nama | BabySleepTeam" />
+    <meta name="twitter:description" content="Upoznajte BabySleepTeam - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece." />
     <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
 
 
@@ -49,24 +48,87 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Baby Sleep Team",
-      "description": "Sertifikovani savetnici za spavanje - pomažemo bebama i deci od 0-7 godina da savladaju veštinu spavanja.",
-      "url": "https://babysleepteam.rs",
-      "telephone": "+38169 151 70 80",
-      "email": "andjelasleeptrainer@gmail.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "RS"
-      },
-      "sameAs": [
-        "https://www.instagram.com/_babysleepteam_"
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://babysleepteam.rs/#organization",
+          "name": "BabySleepTeam",
+          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+          "url": "https://babysleepteam.rs/",
+          "telephone": "+381691517080",
+          "email": "andjelasleeptrainer@gmail.com",
+          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+          },
+          "areaServed": "Worldwide",
+          "sameAs": [
+            "https://www.instagram.com/_babysleepteam_"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381691517080",
+            "contactType": "customer support",
+            "areaServed": "Worldwide",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://babysleepteam.rs/#website",
+          "url": "https://babysleepteam.rs/",
+          "name": "BabySleepTeam",
+          "inLanguage": "sr-RS",
+          "publisher": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://babysleepteam.rs/#sleep-training-service",
+          "name": "Program spavanja za bebe i decu",
+          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "Baby sleep consulting and online sleep training programs",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://babysleepteam.rs/",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "AboutPage",
+          "@id": "https://babysleepteam.rs/o-nama/#webpage",
+          "url": "https://babysleepteam.rs/o-nama/",
+          "name": "O nama | BabySleepTeam",
+          "description": "Upoznajte BabySleepTeam - sertifikovane savetnike za spavanje koji pomažu porodicama da reše probleme nespavanja kod dece.",
+          "inLanguage": "sr-RS",
+          "isPartOf": {
+            "@id": "https://babysleepteam.rs/#website"
+          },
+          "about": {
+            "@id": "https://babysleepteam.rs/#sleep-training-service"
+          }
+        }
       ]
     }
     </script>
 </head>
 
 <body>
+
+    <h1 style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
+        O nama | BabySleepTeam
+    </h1>
 
     <div class="page-wrapper">
         <!-- Main Header -->
@@ -77,7 +139,7 @@
                     <div class="nav-outer clearfix">
 
                         <ul id="header-contact-sm" class="info-box clearfix">
-                            <li><a style="display:flex" href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li style="width: 100%;text-align:right"><a
                                     href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -87,14 +149,14 @@
                         </ul>
 
                         <ul id="header-contact-lg" class="info-box clearfix">
-                            <li><a href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
                                         class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                         </ul>
 
                         <div class="responsive-logo"><a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                    alt="Baby Sleep Team Logo"></a></div>
+                                    alt="BabySleepTeam Logo"></a></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
@@ -110,9 +172,9 @@
                             <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li><a href="../index.html">Početna</a></li>
-                                    <li><a href="index.html">O nama</a></li>
+                                    <li class="current"><a href="index.html">O nama</a></li>
                                     <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li><a href="index.html#testimonials">Utisci</a></li>
+                                    <li><a href="#testimonials">Utisci</a></li>
                                     <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
                                     <li><a href="../galerija/index.html">Galerija</a></li>
                                     <li><a href="../index.html#faq">Česta pitanja</a></li>
@@ -133,7 +195,7 @@
                         <!-- Option Box -->
                         <div class="option-box">
                             <ul class="clearfix">
-                                <li class="search-box-btn"><a href="tel:+38169 151 70 80"><span
+                                <li class="search-box-btn"><a href="tel:+381691517080"><span
                                             class="icon fas fa-phone"></span></a></li>
                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
                                             class="fa fa-envelope"></span></a></li>
@@ -143,7 +205,7 @@
                         <!--Logo-->
                         <div class="logo-outer">
                             <div class="logo"><a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                        alt="Baby Sleep Team Logo"></a></div>
+                                        alt="BabySleepTeam Logo"></a></div>
                         </div>
 
                         <ul class="social-icon-colored">
@@ -161,7 +223,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="../index.html" title="Baby Sleep Team"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo"></a>
+                        <a href="../index.html" title="BabySleepTeam"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a>
                     </div>
                     <!--Right Col-->
                     <div class="pull-right">
@@ -170,9 +232,9 @@
                             <div class="navbar-collapse show collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li><a href="../index.html">Početna</a></li>
-                                    <li><a href="index.html">O nama</a></li>
+                                    <li class="current"><a href="index.html">O nama</a></li>
                                     <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li><a href="index.html#testimonials">Utisci</a></li>
+                                    <li><a href="#testimonials">Utisci</a></li>
                                     <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
                                     <li><a href="../galerija/index.html">Galerija</a></li>
                                     <li><a href="../index.html#faq">Česta pitanja</a></li>
@@ -232,9 +294,9 @@
                                                     <p style="text-align: justify;"><strong>Šta je program
                                                             spavanja?</strong></p>
                                                     <p style="text-align: justify;">Iako većina umornih roditelja čvrsto
-                                                        veruje da njihovom detetu „nema pomoći“ jer je „drugačije“,
-                                                        „treba mu manje sna nego drugoj deci“, „takvo je od rođenja“ ili
-                                                        sigurno „ima neki medicinski problem za koji se još ne zna“,
+                                                        veruje da njihovom detetu "nema pomoći" jer je "drugačije",
+                                                        "treba mu manje sna nego drugoj deci", "takvo je od rođenja" ili
+                                                        sigurno "ima neki medicinski problem za koji se još ne zna",
                                                         šanse da je zaista tako su <strong>vrlo male</strong>!</p>
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;"><strong>Rezultati 52 naučne
@@ -256,13 +318,13 @@
                                                         nespavanja zajedno sa svojim detetom, prvo se obrati
                                                         prijateljima sa decom, mamama, bakama, svekrvama, pa ako nije
                                                         dovoljno, a uglavnom nije, potraže pomoć pedijatra, psihologa
-                                                        ili čak psihijatra, bioenergetičara…</p>
+                                                        ili čak psihijatra, bioenergetičara...</p>
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;">Međutim, svi oni će Vam najčešće
-                                                        reći da je sa Vašim detetom sve u redu i da je sasvim „normalno“
+                                                        reći da je sa Vašim detetom sve u redu i da je sasvim "normalno"
                                                         što mala dece ne spavaju. Utešiće Vas neutešnom rečenicom:
-                                                        „Sačekajte da malo porastu pa će se to srediti samo od sebe, svi
-                                                        smo kroz to prošli“. Ipak, ovo još nikom nije pomoglo.</p>
+                                                        "Sačekajte da malo porastu pa će se to srediti samo od sebe, svi
+                                                        smo kroz to prošli". Ipak, ovo još nikom nije pomoglo.</p>
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;"><strong>Lekovi, mak i rakija pred
                                                             spavanje</strong></p>
@@ -272,18 +334,18 @@
                                                         lekovi imaju vrlo kratkotrajno dejstvo i ne rešavaju uzrok
                                                         problema, te će Vaše dete ponovo biti premoreno i neispavano čim
                                                         prestanete sa ovom pogrešnom terapijom. O maku i rakiju, da ne
-                                                        govorimo…</p>
+                                                        govorimo...</p>
                                                     <p style="text-align: justify;"> </p>
-                                                    <p style="text-align: justify;"><strong>„Pusti ga da plače dok ne
-                                                            zaspi“ metoda</strong></p>
+                                                    <p style="text-align: justify;"><strong>"Pusti ga da plače dok ne
+                                                            zaspi" metoda</strong></p>
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;">O programu za spavanje Vam niko
                                                         ništa neće reći jer se o ovom pristupu na našim prostorima i
                                                         dalje vrlo malo zna. On se dodatno pogrešno povezuje sa
-                                                        Cry-it-out ili „pusti ga da plače dok ne zaspi“ metodom, zbog
+                                                        Cry-it-out ili "pusti ga da plače dok ne zaspi" metodom, zbog
                                                         čega je povremeno prisutno nepoverenje čak i skepsa.</p>
                                                     <p style="text-align: justify;"> </p>
-                                                    <p style="text-align: justify;">O „pusti ga da plače dok ne zaspi“
+                                                    <p style="text-align: justify;">O "pusti ga da plače dok ne zaspi"
                                                         metodi nekada su iz očaja pristupale naše bake, pa smo i mi
                                                         danas, u trenucima potpunog pomračenja svesti od umora u
                                                         iskušenju da je primenimo na našoj deci i bebama.</p>
@@ -300,7 +362,7 @@
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;">Više nema potrebe da birate između
                                                         nespavanja i izlaganja deteta plaču do iznemoglosti jer postoji
-                                                        rešenje – programi spavanja.</p>
+                                                        rešenje - programi spavanja.</p>
                                                     <p style="text-align: justify;"> </p>
                                                     <p style="text-align: justify;">Program spavanja je naučno
                                                         zasnovana, blaga metoda koja se već nekoliko decenija uspešno
@@ -373,7 +435,7 @@
                                                         dojenja dolazi do frustracije i nezadovoljstva i kod majke i kod
                                                         bebe. Beba se trudi da sisa ali bezuspešno, ne guta, postaje
                                                         nervozna, kreće da plače a majka ima osećaj da nema dovoljno
-                                                        mleka jer svo mleko usled stresa zapravo ostaje ”zarobljeno” u
+                                                        mleka jer svo mleko usled stresa zapravo ostaje "zarobljeno" u
                                                         dojkama.<a name="_ftnref3" href="#_ftn3"><span>[3]</span></a>
                                                     </p>
                                                     <p style="text-align: justify;"> </p>
@@ -417,8 +479,8 @@
                                                     <p style="text-align: justify;">Spavanje kod dece je <strong>vrlo
                                                             kompleksan proces</strong> kome je potrebno mnogo
                                                         posvećenosti i znanja. Jedan od naših klijenata na kraju
-                                                        programa ovako je opisao svoj utisak: <strong>„Osećao sam se sve
-                                                            vreme kao da igram partiju šaha“.</strong> I zaista, pred
+                                                        programa ovako je opisao svoj utisak: <strong>"Osećao sam se sve
+                                                            vreme kao da igram partiju šaha".</strong> I zaista, pred
                                                         Vama je ozbiljna partija šaha u kojoj ako Vi pobedite, svi su
                                                         pobednici!</p>
                                                     <p style="text-align: justify;"> </p>
@@ -464,11 +526,7 @@
                                                         Overview - Postnatal depression:
                                                         https://www.nhs.uk/mental-health/conditions/post-natal-depression/overview/
                                                     </p>
-                                                </body>
-
                                                 <!-- Mirrored from babysleepteam.rs/o-nama/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2025 09:03:12 GMT -->
-
-                                                </html>
                                             </div>
                                         </div>
                                     </div>
@@ -494,21 +552,14 @@
                                     <div class="content-column col-lg-6 col-md-12 col-sm-12">
                                         <div class="inner-column">
                                             <div class="text">
-                                                <!DOCTYPE html>
-                                                <html>
-
-                                                <head>
-                                                </head>
-
-                                                <body>
-                                                    <p style="text-align: justify;"><strong>Baby sleep team</strong> je
+                                                    <p style="text-align: justify;"><strong>BabySleepTeam</strong> je
                                                         nastao nakon mnogo neprospavanih noći. Česta buđenja, kratak
                                                         dnevni san, umorno, bolešljivo, razdražljivo dete, iznureni i
                                                         nervozni roditelji, sve je to bila naša svakodnevica. Saveti:
-                                                        „Daj mu malo maka ili rakije pred spavanje“, „imaš one
-                                                        homeopatske tabletice za bebe“, „normalno je što ne spava sa
-                                                        godinu i po dana“, „svi smo to prošli pa ćete i vi, šta se
-                                                        žalite“, nas nisu zadovoljavali.</p>
+                                                        "Daj mu malo maka ili rakije pred spavanje", "imaš one
+                                                        homeopatske tabletice za bebe", "normalno je što ne spava sa
+                                                        godinu i po dana", "svi smo to prošli pa ćete i vi, šta se
+                                                        žalite", nas nisu zadovoljavali.</p>
                                                     <p style="text-align: justify;">Znali smo da nije normalno to što ne
                                                         spavamo. Znali smo da naš dečak Luka pati i da ne dobija
                                                         dovoljno kvalitetnog sna koji mu je tako važan za razvoj. Nismo
@@ -543,9 +594,6 @@
                                                         je znanje jer spavanje je veština koja se uči, a deca sve uče
                                                         brzo. Od konačne prospavane noći deli vas samo dve nedelje
                                                         personalizovanog programa spavanja!</p>
-                                                </body>
-
-                                                </html>
                                             </div>
                                         </div>
                                     </div>
@@ -589,13 +637,6 @@
                                                     <div class="inner-column"
                                                         style="display: flex; justify-content: center;padding-left:0;padding-top: 4px;">
                                                         <div class="text opis-tim">
-                                                            <!DOCTYPE html>
-                                                            <html>
-
-                                                            <head>
-                                                            </head>
-
-                                                            <body>
                                                                 <p>Ja sam Anđela Jerinić, sertifikovani savetnik za
                                                                     spavanje i majka dve bebe, Filipa i Luke,
                                                                     zahvaljujući čijem nespavanju je nastao <em>Baby
@@ -618,16 +659,13 @@
                                                                     časopisima i portalima.</p>
                                                                 <p>U slobodno vreme bavim se skijanjem, jedrenjem,
                                                                     trčanjem i muzikom, šetam našu belu retriverku Neli,
-                                                                    ali najviše od svega – bavim se decom, njihovim
+                                                                    ali najviše od svega - bavim se decom, njihovim
                                                                     zdravim snom, zdravom ishranom, dobrim navikama i
                                                                     kvalitetno provedenim porodičnim vremenom.</p>
                                                                 <p>Programi spavanja su jedno od najvećih otkrića u mom
                                                                     životu, nakon čega sam rešila da svoje znanje i
                                                                     iskustvo počnem da delim sa svim porodicama koje
                                                                     nepotrebno pate od nespavanja!</p>
-                                                            </body>
-
-                                                            </html>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -669,20 +707,13 @@
                                                     <div class="inner-column"
                                                         style="display: flex; justify-content: center;padding-left:0;padding-top: 4px;">
                                                         <div class="text opis-tim">
-                                                            <!DOCTYPE html>
-                                                            <html>
-
-                                                            <head>
-                                                            </head>
-
-                                                            <body>
                                                                 <p>Zdravo, ja sam Nebojša, tata dvoje dece i jedan od
-                                                                    osnivača Baby sleep team-a. Moj profesionalni put
-                                                                    bio je sve, samo ne tipičan – pre 4 godine postao
+                                                                    osnivača BabySleepTeam-a. Moj profesionalni put
+                                                                    bio je sve, samo ne tipičan - pre 4 godine postao
                                                                     sam doktor pravnih nauka, svega 10 dana nakon što
                                                                     sam po prvi put postao tata. Završetak tog poglavlja
                                                                     u mom životu označio je početak nečeg mnogo
-                                                                    izazovnijeg – uloge roditelja.<br />Nisam ni slutio
+                                                                    izazovnijeg - uloge roditelja.<br />Nisam ni slutio
                                                                     da ću kao predavač i naučnik iz oblasti prava na
                                                                     Akademiji, razvijati veštine koje danas koristim u
                                                                     radu sa porodicama: sistematičnost, analitički
@@ -693,9 +724,9 @@
                                                                     meseci sa bebom. Taj prvi period roditeljstva nam je
                                                                     dao motivaciju da pronađemo rešenje, ne samo za
                                                                     svoje dete, već i za sve bebe i roditelje oko nas,
-                                                                    pošto smo shvatili da zapravo – niko ne spava!
+                                                                    pošto smo shvatili da zapravo - niko ne spava!
                                                                     Srećan sam i ponosan što nespavanje nikad nismo
-                                                                    prihvatili kao „normalno“ i što smo istrajali u
+                                                                    prihvatili kao "normalno" i što smo istrajali u
                                                                     traženju rešenja koje danas svakodnevno prenosim na
                                                                     nove roditelje i nove bebe kojima treba odmor i
                                                                     miran san.<br />Kroz svoj dosadašnji rad održao sam
@@ -705,9 +736,9 @@
                                                                     spavanje nosi. Najponosniji sam na zadovoljne
                                                                     roditelje i najvažnije - naspavane bebe. Takođe,
                                                                     ponosan sam na svoja dva
-                                                                    sertifikata:<br />„Neurobiology, Medicine, and
-                                                                    Society“ sa Univerziteta Mičigen <br />Sertifikat
-                                                                    Baby Sleep Team-a.<br />Uvesti dete u rutinu
+                                                                    sertifikata:<br />"Neurobiology, Medicine, and
+                                                                    Society" sa Univerziteta Mičigen <br />Sertifikat
+                                                                    BabySleepTeam-a.<br />Uvesti dete u rutinu
                                                                     spavanja znači izrazito personalizovan proces, rad 1
                                                                     na 1, u kome pomožamo roditeljima da u skaldu sa
                                                                     bebinim karakterom, uzrastom, dosadašnjim navikama i
@@ -721,11 +752,8 @@
                                                                     spokojne noći, a svako dete spokojno
                                                                     odrastanje.<br />Ako ste spremni da napravite
                                                                     promenu i pomognete svom detetu da se samo uspava i
-                                                                    prespava noć, ovde sam da vas vodim na tom putu – sa
+                                                                    prespava noć, ovde sam da vas vodim na tom putu - sa
                                                                     stručnošću, saosećanjem i posvećenošću.</p>
-                                                            </body>
-
-                                                            </html>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -776,13 +804,6 @@
                             <h2>Kome je namenjen program spavanja?</h2>
                         </div>
                         <div class="text">
-                            <!DOCTYPE html>
-                            <html>
-
-                            <head>
-                            </head>
-
-                            <body>
                                 <p style="text-align: justify;">Ako Vaša beba ne spava, preumorni ste, sve ste probali i
                                     ništa nije pomoglo, lekari nemaju odgovor a Vi se ipak niste pomirili sa
                                     nespavanjem, programi spavanja su sigurno rešenje za Vas i Vašu bebu.</p>
@@ -800,16 +821,13 @@
                                     <li>Svi drugi oblici lošeg sna kod dece i beba starosti od 4 meseca do 7 godina.
                                     </li>
                                 </ul>
-                            </body>
-
-                            </html>
                         </div>
                     </div>
                 </div>
                 <!--Image Column-->
                 <div class="image-column">
                     <div class="inner-column"
-                        style="background-image:url(media/img/kelly-sikkema-dpmevl6jcho-unsplash-1.jpg);">
+                        style="background-image:url(../media/img/kelly-sikkema-dpmevl6jcho-unsplash-1.jpg);">
                     </div>
                     <div class="caption-box">
                         <h3>Miran san za bebu i Vas!</h3>
@@ -1908,7 +1926,7 @@
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
                                             <a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                                    alt="Baby Sleep Team Logo" /></a>
+                                                    alt="BabySleepTeam Logo" /></a>
                                         </div>
                                         <div class="text">Dobar san predstavlja osnov psihičkog i fizičkog zdravlja
                                             svakog čoveka a naročito beba. Kroz personalizovani rad sa Vama i Vašim
@@ -1943,7 +1961,7 @@
                                         <h4 class="widget-title">Kontakt</h4>
                                         <div class="widget-content">
                                             <ul class="contact-info">
-                                                <li><a href="tel:+38169 151 70 80"><span
+                                                <li><a href="tel:+381691517080"><span
                                                             class="fa fa-phone-square"></span>Anđela: +38169 151 70
                                                         80</a></li>
                                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -1978,7 +1996,7 @@
                                 class="fab fa-instagram"></span></a>
                         </li>
                     </ul>
-                    <div class="copyright"> Copyright &copy; 2025 Baby Sleep Team</div>
+                    <div class="copyright"> Copyright &copy; 2025 BabySleepTeam</div>
                 </div>
             </div>
         </footer>
@@ -2037,3 +2055,4 @@
 </body>
 
 </html>
+

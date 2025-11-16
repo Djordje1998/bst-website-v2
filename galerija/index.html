@@ -1,24 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Galerija | Baby Sleep Team</title>
-    <meta name="description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. Baby Sleep Team - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
-    <meta name="keywords" content="galerija baby sleep team, zadovoljni roditelji, utisci, sertifikovani savetnik za spavanje" />
-    <meta name="author" content="Baby Sleep Team - Anđela Jerinić" />
+    <title>Galerija | BabySleepTeam</title>
+    <meta name="description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. BabySleepTeam - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
+    <meta name="keywords" content="galerija BabySleepTeam, zadovoljni roditelji, utisci, sertifikovani savetnik za spavanje" />
+    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     
     <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://www.googletagmanager.com">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/bootstrap3860.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/style3860.css?v=1" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style3860.css?v=1">
     <link href="../css/responsive3860.css?v=1" rel="stylesheet">
 
     <!-- Cookie Consent CSS -->
@@ -29,32 +28,97 @@
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Galerija | Baby Sleep Team" />
-    <meta property="og:description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. Baby Sleep Team - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
+    <meta property="og:title" content="Galerija | BabySleepTeam" />
+    <meta property="og:description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. BabySleepTeam - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
     <meta property="og:url" content="https://babysleepteam.rs/galerija/index.html" />
     <meta property="og:image" content="https://babysleepteam.rs/media/4.png" />
     <meta property="og:locale" content="sr_RS" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Galerija | Baby Sleep Team" />
-    <meta name="twitter:description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. Baby Sleep Team - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
+    <meta name="twitter:title" content="Galerija | BabySleepTeam" />
+    <meta name="twitter:description" content="Pogledajte našu galeriju zadovoljnih beba i roditelja. BabySleepTeam - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije." />
     <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "ImageGallery",
-        "name": "Galerija | Baby Sleep Team",
-        "description": "Pogledajte našu galeriju zadovoljnih beba i roditelja",
-        "url": "https://babysleepteam.rs/galerija/index.html",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Baby Sleep Team",
-            "telephone": "+38169-151-70-80",
-            "email": "andjelasleeptrainer@gmail.com"
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://babysleepteam.rs/#organization",
+          "name": "BabySleepTeam",
+          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+          "url": "https://babysleepteam.rs/",
+          "telephone": "+381691517080",
+          "email": "andjelasleeptrainer@gmail.com",
+          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+          },
+          "areaServed": "Worldwide",
+          "sameAs": [
+            "https://www.instagram.com/_babysleepteam_"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381691517080",
+            "contactType": "customer support",
+            "areaServed": "Worldwide",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://babysleepteam.rs/#website",
+          "url": "https://babysleepteam.rs/",
+          "name": "BabySleepTeam",
+          "inLanguage": "sr-RS",
+          "publisher": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://babysleepteam.rs/#sleep-training-service",
+          "name": "Program spavanja za bebe i decu",
+          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "Baby sleep consulting and online sleep training programs",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://babysleepteam.rs/galerija/index.html",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "ImageGallery",
+          "@id": "https://babysleepteam.rs/galerija/index.html#webpage",
+          "url": "https://babysleepteam.rs/galerija/index.html",
+          "name": "Galerija | BabySleepTeam",
+          "description": "Pogledajte našu galeriju zadovoljnih beba i roditelja.",
+          "inLanguage": "sr-RS",
+          "isPartOf": {
+            "@id": "https://babysleepteam.rs/#website"
+          },
+          "about": {
+            "@id": "https://babysleepteam.rs/#sleep-training-service"
+          },
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
         }
+      ]
     }
     </script>
 </head>
@@ -70,7 +134,7 @@
                     <div class="nav-outer clearfix">
 
                         <ul id="header-contact-sm" class="info-box clearfix">
-                            <li><a style="display:flex" href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li style="width: 100%;text-align:right"><a
                                     href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -80,14 +144,14 @@
                         </ul>
 
                         <ul id="header-contact-lg" class="info-box clearfix">
-                            <li><a href="tel:+38169 151 70 80">Anđela: +38169 151 70 80 <span
+                            <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span
                                         class="fa fa-phone-square"></span></a></li>
                             <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
                                         class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
                         </ul>
 
                         <div class="responsive-logo"><a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                    alt="Baby Sleep Team Logo"></a></div>
+                                    alt="BabySleepTeam Logo"></a></div>
 
                         <!-- Main Menu -->
                         <nav class="main-menu navbar-expand-md navbar-light">
@@ -107,7 +171,7 @@
                                     <li><a href="../index.html#programs">Usluge</a></li>
                                     <li><a href="../o-nama/index.html#testimonials">Utisci</a></li>
                                     <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
-                                    <li><a href="index.html">Galerija</a></li>
+                                    <li class="current"><a href="index.html">Galerija</a></li>
                                     <li><a href="../index.html#faq">Česta pitanja</a></li>
                                     <li><a href="../kontakt/index.html">Kontakt</a></li>
                                 </ul>
@@ -136,14 +200,12 @@
                         <!--Logo-->
                         <div class="logo-outer">
                             <div class="logo"><a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                        alt="Baby Sleep Team Logo"></a></div>
+                                        alt="BabySleepTeam Logo"></a></div>
                         </div>
 
                         <ul class="social-icon-colored">
-                            <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" aria-label="Instagram"><span
+                            <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span
                                     class="fab fa-instagram"></span></a></li>
-                            <!--<li><a href="#"><span class="fab fa-twitter"></span></a></li>-->
-                            <!--<li><a href="#"><span class="fab fa-youtube"></span></a></li>-->
                         </ul>
                     </div>
                 </div>
@@ -154,7 +216,7 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="../index.html" title="Baby Sleep Team"><img src="../media/logo-aneta.jpg" alt="Baby Sleep Team Logo"></a>
+                        <a href="../index.html" title="BabySleepTeam"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a>
                     </div>
                     <!--Right Col-->
                     <div class="pull-right">
@@ -561,7 +623,7 @@
                                     <div class="footer-widget logo-widget">
                                         <div class="logo">
                                             <a href="../index.html"><img src="../media/logo-aneta.jpg"
-                                                    alt="Baby Sleep Team Logo" /></a>
+                                                    alt="BabySleepTeam Logo" /></a>
                                         </div>
                                         <div class="text">Dobar san predstavlja osnov psihičkog i fizičkog zdravlja
                                             svakog čoveka a naročito beba. Kroz personalizovani rad sa Vama i Vašim
@@ -596,7 +658,7 @@
                                         <h4 class="widget-title">Kontakt</h4>
                                         <div class="widget-content">
                                             <ul class="contact-info">
-                                                <li><a href="tel:+38169 151 70 80"><span
+                                                <li><a href="tel:+381691517080"><span
                                                             class="fa fa-phone-square"></span>Anđela: +38169 151 70
                                                         80</a></li>
                                                 <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
@@ -609,11 +671,11 @@
 
 
                                         <a href="../media/img/andjela-jerini%c4%87-cpd-certificate.png"
-                                            target="_blank" class="p-3">
+                                            target="_blank" rel="noopener noreferrer" class="p-3">
                                             <i class="fa fa-file-pdf fa-2x"></i>
                                         </a>
                                         <a href="../media/img/andjela-jerini%c4%87-sleep-nanny-academy-certificate-1.png"
-                                            target="_blank" class="p-3">
+                                            target="_blank" rel="noopener noreferrer" class="p-3">
                                             <i class="fa fa-file-pdf fa-2x"></i>
                                         </a>
                                     </div>
@@ -630,7 +692,7 @@
                         <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span
                                 class="fab fa-instagram"></span></a></li>
                     </ul>
-                    <div class="copyright"> Copyright &copy; 2025 Baby Sleep Team</div>
+                    <div class="copyright"> Copyright &copy; 2025 BabySleepTeam</div>
                 </div>
             </div>
         </footer>
@@ -658,12 +720,8 @@
     <script src="../scripts/jquery.fancybox3860.js?v=1" defer></script>
     
     <!-- Page Animations -->
-    <script src="../scripts/wow3860.js?v=1" defer></script>
-    <script src="../scripts/appear3860.js?v=1" defer></script>
-    <script src="../scripts/parallax.min3860.js?v=1" defer></script>
     
     <!-- Main Theme Script -->
-    <script src="../scripts/script3860.js?v=1" defer></script>
     
     <!-- Initialize Bootstrap Tooltips & Scroll-to-Top -->
     <script>

@@ -1,4 +1,4 @@
-// Cookie Consent Configuration for Baby Sleep Team
+// Cookie Consent Configuration for BabySleepTeam
 // Wait for CookieConsent library to load
 window.addEventListener('load', function() {
     if (typeof CookieConsent !== 'undefined') {
@@ -46,7 +46,6 @@ window.addEventListener('load', function() {
             },
 
             onFirstConsent: function() {
-                console.log('Cookie consent - First consent given');
                 // Save to localStorage for file:// protocol
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
@@ -55,7 +54,6 @@ window.addEventListener('load', function() {
             },
 
             onConsent: function() {
-                console.log('Cookie consent - Consent updated');
                 // Save to localStorage for file:// protocol
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
@@ -64,7 +62,6 @@ window.addEventListener('load', function() {
             },
 
             onChange: function() {
-                console.log('Cookie consent - Preferences changed');
                 // Save to localStorage for file:// protocol
                 if (window.location.protocol === 'file:') {
                     localStorage.setItem('cc_cookie_babysleepteam', 'true');
@@ -78,6 +75,7 @@ window.addEventListener('load', function() {
                     enabled: true
                 },
                 analytics: {
+                    enabled: true,
                     autoClear: {
                         cookies: [
                             {
@@ -94,10 +92,10 @@ window.addEventListener('load', function() {
                 translations: {
                     sr: {
                         consentModal: {
-                            title: 'Kolačići (Cookies)',
-                            description: 'Naša veb stranica koristi kolačiće kako bismo razumeli kako vi koristite sajt. Praćenje će biti omogućeno samo ako vi to eksplicitno prihvatite. <a href="#privacy-policy" data-cc="show-preferencesModal" class="cc__link">Upravljaj podešavanjima</a>',
-                            acceptAllBtn: 'Prihvati sve',
-                            acceptNecessaryBtn: 'Odbij sve',
+                            title: 'Kolačići na BabySleepTeam sajtu',
+                            description: 'Na sajtu BabySleepTeam koristimo kolačiće kako bi sve funkcije radile bez problema i kako bismo poboljšali sadržaj za roditelje. Klikom na „Prihvati sve kolačiće" pomažete nam da prikupljamo anonimne statistike, a podešavanja možete promeniti u svakom trenutku. <a href="#privacy-policy" data-cc="show-preferencesModal" class="cc__link">Upravljaj podešavanjima</a>',
+                            acceptAllBtn: 'Prihvati sve kolačiće',
+                            acceptNecessaryBtn: 'Dozvoli samo neophodne',
                             footer: `
                                 <a href="/kontakt/">Politika kolačića</a>
                                 <a href="/kontakt/">Politika privatnosti</a>
@@ -106,60 +104,60 @@ window.addEventListener('load', function() {
                         },
                         preferencesModal: {
                             title: 'Podešavanja kolačića',
-                            acceptAllBtn: 'Prihvati sve',
-                            acceptNecessaryBtn: 'Odbij sve',
+                            acceptAllBtn: 'Prihvati sve kolačiće',
+                            acceptNecessaryBtn: 'Dozvoli samo neophodne',
                             savePreferencesBtn: 'Sačuvaj podešavanja',
                             closeIconLabel: 'Zatvori',
                             sections: [
                                 {
-                                    title: 'Upotreba kolačića',
-                                    description: 'Koristimo kolačiće kako bismo poboljšali vaše iskustvo na našoj veb stranici. Neki kolačići su neophodni za funkcionisanje sajta, dok drugi pomažu u analizi kako koristite sajt.'
+                                    title: 'Kako BabySleepTeam koristi kolačiće',
+                                    description: 'Kolačiće koristimo da bismo poboljšali vaše iskustvo, prilagodili sadržaj roditeljima i razumeli koje stranice i programi spavanja su vam najkorisniji.'
                                 }, {
                                     title: 'Neophodni kolačići',
-                                    description: 'Ovi kolačići su neophodni za pravilan rad veb stranice i ne mogu biti isključeni.',
+                                    description: 'Ovi kolačići su neophodni da bi sajt BabySleepTeam radio bezbedno i ispravno (npr. osnovne funkcije, izbor jezika) i ne mogu biti isključeni.',
                                     linkedCategory: 'necessary'
                                 }, {
                                     title: 'Analitički kolačići',
-                                    description: 'Ovi kolačići nam pomažu da razumemo kako posetioci koriste veb stranicu prikupljanjem anonimnih podataka. Koristimo Google Analytics za ovu svrhu.',
+                                    description: 'Analitički kolačići nam pomažu da anonimno razumemo kako roditelji koriste naš sajt, kako bismo unapredili sadržaj i programe spavanja. Koristimo Google Analytics i podatke ne povezujemo sa vašim identitetom.',
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'Više informacija',
-                                    description: 'Za bilo kakva pitanja u vezi sa našom politikom kolačića, molimo vas da nas <a class="cc__link" href="/kontakt/">kontaktirate</a>.'
+                                    description: 'Ako imate pitanja u vezi sa kolačićima ili privatnošću, molimo vas da nas kontaktirate.'
                                 }
                             ]
                         }
                     },
                     en: {
                         consentModal: {
-                            title: 'We use cookies',
-                            description: 'Our website uses tracking cookies to understand how you interact with it. Tracking will be enabled only if you accept explicitly. <a href="#privacy-policy" data-cc="show-preferencesModal" class="cc__link">Manage preferences</a>',
-                            acceptAllBtn: 'Accept all',
-                            acceptNecessaryBtn: 'Reject all',
+                            title: 'Cookies on BabySleepTeam',
+                            description: 'BabySleepTeam uses cookies to keep the website running smoothly and to improve the content we create for parents. By clicking “Accept all cookies” you allow us to collect anonymous statistics, and you can change your preferences at any time. <a href="#privacy-policy" data-cc="show-preferencesModal" class="cc__link">Manage preferences</a>',
+                            acceptAllBtn: 'Accept all cookies',
+                            acceptNecessaryBtn: 'Allow necessary only',
                             footer: `
-                                <a href="/kontakt/">Contact</a>
+                                <a href="/kontakt/">Contact & privacy</a>
                             `
                         },
                         preferencesModal: {
                             title: 'Cookie preferences',
-                            acceptAllBtn: 'Accept all',
-                            acceptNecessaryBtn: 'Reject all',
+                            acceptAllBtn: 'Accept all cookies',
+                            acceptNecessaryBtn: 'Allow necessary only',
                             savePreferencesBtn: 'Save preferences',
                             closeIconLabel: 'Close',
                             sections: [
                                 {
-                                    title: 'Cookie usage',
-                                    description: 'We use cookies to improve your experience on our website. Some cookies are necessary for the site to function, while others help us analyze how you use the site.'
+                                    title: 'How BabySleepTeam uses cookies',
+                                    description: 'We use cookies to improve your experience on our site, tailor information for parents and see which articles and sleep programs are most useful.'
                                 }, {
                                     title: 'Strictly necessary cookies',
-                                    description: 'These cookies are essential for the proper functioning of the website and cannot be disabled.',
+                                    description: 'These cookies are required for the BabySleepTeam website to function securely and correctly (e.g. basic features, language choice) and cannot be disabled.',
                                     linkedCategory: 'necessary'
                                 }, {
-                                    title: 'Performance and analytics cookies',
-                                    description: 'These cookies help us understand how visitors use our website by collecting anonymous data. We use Google Analytics for this purpose.',
+                                    title: 'Analytics cookies',
+                                    description: 'Analytics cookies help us understand, in an anonymous way, how parents use our website so we can improve our content and sleep programs. We use Google Analytics and do not use this data to identify you.',
                                     linkedCategory: 'analytics'
                                 }, {
                                     title: 'More information',
-                                    description: 'For any questions regarding our cookie policy, please <a class="cc__link" href="/kontakt/">contact us</a>.'
+                                    description: 'For any questions about cookies or privacy, please contact us.'
                                 }
                             ]
                         }
