@@ -128,9 +128,9 @@ window.addEventListener('load', function() {
                             acceptAllBtn: 'Prihvati sve kolačiće',
                             acceptNecessaryBtn: 'Dozvoli samo neophodne',
                             footer: `
-                                <a href="/kontakt/">Politika kolačića</a>
-                                <a href="/kontakt/">Politika privatnosti</a>
-                                <a href="/kontakt/">Uslovi korišćenja</a>
+                                <a href="../pravila/politika-kolacica.html">Politika kolačića</a>
+                                <a href="../pravila/politika-privatnosti.html">Politika privatnosti</a>
+                                <a href="../pravila/uslovi-koriscenja.html">Uslovi korišćenja</a>
                             `
                         },
                         preferencesModal: {
@@ -165,7 +165,7 @@ window.addEventListener('load', function() {
                             acceptAllBtn: 'Accept all cookies',
                             acceptNecessaryBtn: 'Allow necessary only',
                             footer: `
-                                <a href="/kontakt/">Contact & privacy</a>
+                                <a href="/pravila/politika-privatnosti.html">Privacy policy</a>
                             `
                         },
                         preferencesModal: {
