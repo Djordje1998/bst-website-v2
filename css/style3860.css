@@ -5147,6 +5147,17 @@ img{
 	margin-bottom: 18px;
 }
 
+.main-footer h4.widget-title.pt-3 + .widget-content{
+	margin-top: 8px;
+}
+
+.main-footer h4.widget-title.pt-3 + .widget-content > ul.contact-info li{
+	padding-left: 0;
+	font-size: 14px;
+	line-height:22px;
+	margin-bottom: 8px;
+}
+
 .main-footer .contact-info li .fa{
 	position: absolute;
 	left: 0;
