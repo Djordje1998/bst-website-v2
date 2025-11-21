@@ -1,0 +1,116 @@
+<header class="main-header">
+    <!-- Header Upper -->
+    <div class="header-upper">
+        <div class="container-fluid">
+            <div class="nav-outer clearfix">
+
+                <ul id="header-contact-sm" class="info-box clearfix">
+                    <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span
+                                class="fa fa-phone-square"></span></a></li>
+                    <li style="width: 100%;text-align:right"><a
+                            href="mailto:andjelasleeptrainer@gmail.com"><span
+                                class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
+                    <li id="insta-header"><a href="https://www.instagram.com/_babysleepteam_" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><span style="font-size: 1.5em;"
+                                class="fab fa-instagram"></span></a></li>
+                </ul>
+
+                <ul id="header-contact-lg" class="info-box clearfix">
+                    <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span
+                                class="fa fa-phone-square"></span></a></li>
+                    <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
+                                class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
+                </ul>
+
+                <div class="responsive-logo"><a href="/"><img src="/media/logo-aneta.jpg"
+                            alt="BabySleepTeam Logo"></a></div>
+
+                <!-- Main Menu -->
+                <nav class="main-menu navbar-expand-md navbar-light">
+                    <div class="navbar-header">
+                        <!-- Togg le Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon flaticon-menu-button"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+                        <ul class="navigation clearfix">
+                            <li class="{% if page.url == '/' %}current{% endif %}"><a href="/">Početna</a></li>
+                            <li class="{% if '/o-nama/' in page.url %}current{% endif %}"><a href="/o-nama/">O nama</a></li>
+                            <li><a href="/#programs">Usluge</a></li>
+                            <li><a href="/o-nama/#testimonials">Utisci</a></li>
+                            <li class="{% if '/naucni-kutak/' in page.url %}current{% endif %}"><a href="/naucni-kutak/">Naučni kutak</a></li>
+                            <li class="{% if '/galerija/' in page.url %}current{% endif %}"><a href="/galerija/">Galerija</a></li>
+                            <li><a href="/#faq">Česta pitanja</a></li>
+                            <li class="{% if '/kontakt/' in page.url %}current{% endif %}"><a href="/kontakt/">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Main Menu End-->
+            </div>
+        </div>
+    </div>
+    <!--End Header Upper-->
+
+    <!-- Header Lower -->
+    <div class="header-lower">
+        <div class="auto-container">
+            <div class="outer-box">
+                <!-- Option Box -->
+                <div class="option-box">
+                    <ul class="clearfix">
+                        <li class="search-box-btn"><a href="tel:+381691517080"><span
+                                    class="icon fas fa-phone"></span></a></li>
+                        <li><a href="mailto:andjelasleeptrainer@gmail.com"><span
+                                    class="fa fa-envelope"></span></a></li>
+                    </ul>
+                </div>
+
+                <!--Logo-->
+                <div class="logo-outer">
+                    <div class="logo"><a href="/"><img src="/media/logo-aneta.jpg"
+                                alt="BabySleepTeam Logo"></a>
+                    </div>
+                </div>
+
+                <ul class="social-icon-colored">
+                    <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank"
+                            rel="noopener noreferrer" aria-label="Instagram"><span
+                                class="fab fa-instagram"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Header  -->
+    <div class="sticky-header">
+        <div class="auto-container clearfix">
+            <!--Logo-->
+            <div class="logo pull-left">
+                <a href="/" title="BabySleepTeam"><img src="/media/logo-aneta.jpg"
+                        alt="BabySleepTeam Logo"></a>
+            </div>
+            <!--Right Col-->
+            <div class="pull-right">
+                <!-- Main Menu -->
+                <nav class="main-menu">
+                    <div class="navbar-collapse show collapse clearfix">
+                        <ul class="navigation clearfix">
+                            <li class="{% if page.url == '/' %}current{% endif %}"><a href="/">Početna</a></li>
+                            <li class="{% if '/o-nama/' in page.url %}current{% endif %}"><a href="/o-nama/">O nama</a></li>
+                            <li><a href="/#programs">Usluge</a></li>
+                            <li><a href="/o-nama/#testimonials">Utisci</a></li>
+                            <li class="{% if '/naucni-kutak/' in page.url %}current{% endif %}"><a href="/naucni-kutak/">Naučni kutak</a></li>
+                            <li class="{% if '/galerija/' in page.url %}current{% endif %}"><a href="/galerija/">Galerija</a></li>
+                            <li><a href="/#faq">Česta pitanja</a></li>
+                            <li class="{% if '/kontakt/' in page.url %}current{% endif %}"><a href="/kontakt/">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </nav><!-- Main Menu End-->
+            </div>
+        </div>
+    </div><!-- End Sticky Menu -->
+</header>

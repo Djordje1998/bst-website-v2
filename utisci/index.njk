@@ -1,236 +1,36 @@
-﻿<!DOCTYPE html>
-<html lang="sr">
+﻿---
+layout: base.njk
+title: Utisci
+description: Pročitajte više od 30 autentičnih utisaka roditelja koji su uz BabySleepTeam rešili probleme nespavanja kod svoje dece.
+keywords: utisci BabySleepTeam, iskustva roditelja, uspavane bebe, BabySleepTeam iskustva
+pageCss: testimonial-grid.css
+---
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Utisci | BabySleepTeam</title>
-    <meta name="description" content="Pročitajte više od 30 autentičnih utisaka roditelja koji su uz BabySleepTeam rešili probleme nespavanja kod svoje dece." />
-    <meta name="keywords" content="utisci BabySleepTeam, iskustva roditelja, uspavane bebe, BabySleepTeam iskustva" />
-    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-
-    <!-- Preconnect for performance -->
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="../css/bootstrap3860.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/settings3860.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/layers3860.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/navigation3860.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/style3860.css?v=1">
-    <link rel="stylesheet" href="../css/responsive3860.css?v=1">
-    <link rel="stylesheet" href="../css/owl.css?v=1" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="../css/testimonial-grid.css?v=1">
-
-    <!-- Cookie Consent CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css">
-
-    <link rel="icon" href="../media/logo-aneta.jpg" type="image/jpeg">
-    <link rel="canonical" href="https://babysleepteam.rs/utisci/index.html" />
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Utisci | BabySleepTeam" />
-    <meta property="og:description" content="Pročitajte iskustva roditelja koji su sa BabySleepTeam programom postigli mirne noći i nasmejana jutra." />
-    <meta property="og:url" content="https://babysleepteam.rs/utisci/index.html" />
-    <meta property="og:image" content="https://babysleepteam.rs/media/4.png" />
-    <meta property="og:locale" content="sr_RS" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Utisci | BabySleepTeam" />
-    <meta name="twitter:description" content="Iskustva roditelja koji su sa BabySleepTeam programima obezbedili miran san za svoju decu." />
-    <meta name="twitter:image" content="https://babysleepteam.rs/media/4.png" />
-
-    <!-- JSON-LD Structured Data -->
+{% block head %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "@id": "https://babysleepteam.rs/#organization",
-          "name": "BabySleepTeam",
-          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
-          "url": "https://babysleepteam.rs/",
-          "telephone": "+381691517080",
-          "email": "andjelasleeptrainer@gmail.com",
-          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Belgrade",
-            "addressCountry": "RS"
-          },
-          "areaServed": "Worldwide",
-          "sameAs": [
-            "https://www.instagram.com/_babysleepteam_"
-          ],
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+381691517080",
-            "contactType": "customer support",
-            "areaServed": "Worldwide",
-            "availableLanguage": [
-              "sr-RS"
-            ]
-          }
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://babysleepteam.rs/#website",
-          "url": "https://babysleepteam.rs/",
-          "name": "BabySleepTeam",
-          "inLanguage": "sr-RS",
-          "publisher": {
-            "@id": "https://babysleepteam.rs/#organization"
-          }
-        },
-        {
-          "@type": "Service",
-          "@id": "https://babysleepteam.rs/#sleep-training-service",
-          "name": "Program spavanja za bebe i decu",
-          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
-          "provider": {
-            "@id": "https://babysleepteam.rs/#organization"
-          },
-          "areaServed": "Worldwide",
-          "serviceType": "Baby sleep consulting and online sleep training programs",
-          "availableChannel": {
-            "@type": "ServiceChannel",
-            "serviceUrl": "https://babysleepteam.rs/",
-            "availableLanguage": [
-              "sr-RS"
-            ]
-          }
-        },
-        {
-          "@type": "CollectionPage",
-          "@id": "https://babysleepteam.rs/utisci/index.html#webpage",
-          "url": "https://babysleepteam.rs/utisci/index.html",
-          "name": "Utisci | BabySleepTeam",
-          "description": "Pročitajte više od 30 autentičnih utisaka roditelja koji su uz BabySleepTeam rešili probleme nespavanja kod svoje dece.",
-          "inLanguage": "sr-RS",
-          "isPartOf": {
-            "@id": "https://babysleepteam.rs/#website"
-          },
-          "about": {
-            "@id": "https://babysleepteam.rs/#sleep-training-service"
-          }
-        }
-      ]
+      "@type": "WebPage",
+      "@id": "https://babysleepteam.rs/utisci/#webpage",
+      "url": "https://babysleepteam.rs/utisci/",
+      "name": "Utisci | BabySleepTeam",
+      "description": "Pročitajte više od 30 autentičnih utisaka roditelja.",
+      "inLanguage": "sr-RS",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://babysleepteam.rs/#website",
+        "url": "https://babysleepteam.rs/",
+        "name": "BabySleepTeam"
+      }
     }
     </script>
-    
-</head>
-
-<body>
-    <div class="page-wrapper">
-        <!-- Main Header -->
-        <header class="main-header">
-            <!-- Header Upper -->
-            <div class="header-upper">
-                <div class="container-fluid">
-                    <div class="nav-outer clearfix">
-                        <ul id="header-contact-sm" class="info-box clearfix">
-                            <li><a style="display:flex" href="tel:+381691517080">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
-                            <li style="width: 100%;text-align:right"><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
-                            <li id="insta-header"><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span style="font-size: 1.5em;" class="fab fa-instagram"></span></a></li>
-                        </ul>
-
-                        <ul id="header-contact-lg" class="info-box clearfix">
-                            <li><a href="tel:+381691517080">Anđela: +38169 151 70 80 <span class="fa fa-phone-square"></span></a></li>
-                            <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
-                        </ul>
-
-                        <div class="responsive-logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a></div>
-
-                        <!-- Main Menu -->
-                        <nav class="main-menu navbar-expand-md navbar-light">
-                            <div class="navbar-header">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="icon flaticon-menu-button"></span>
-                                </button>
-                            </div>
-
-                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
-                                <ul class="navigation clearfix">
-                                    <li><a href="../index.html">Početna</a></li>
-                                    <li><a href="../o-nama/index.html">O nama</a></li>
-                                    <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li class="current"><a href="index.html">Utisci</a></li>
-                                    <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
-                                    <li><a href="../galerija/index.html">Galerija</a></li>
-                                    <li><a href="../index.html#faq">Česta pitanja</a></li>
-                                    <li><a href="../kontakt/index.html">Kontakt</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                        <!-- Main Menu End-->
-                    </div>
-                </div>
-            </div>
-            <!--End Header Upper-->
-
-            <!-- Header Lower -->
-            <div class="header-lower">
-                <div class="auto-container">
-                    <div class="outer-box">
-                        <div class="option-box">
-                            <ul class="clearfix">
-                                <li class="search-box-btn"><a href="tel:+381691517080"><span class="icon fas fa-phone"></span></a></li>
-                                <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span></a></li>
-                            </ul>
-                        </div>
-
-                        <div class="logo-outer">
-                            <div class="logo"><a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a></div>
-                        </div>
-
-                        <ul class="social-icon-colored">
-                            <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sticky Header  -->
-            <div class="sticky-header">
-                <div class="auto-container clearfix">
-                    <div class="logo pull-left">
-                        <a href="../index.html" title="BabySleepTeam"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo"></a>
-                    </div>
-                    <div class="pull-right">
-                        <nav class="main-menu">
-                            <div class="navbar-collapse show collapse clearfix">
-                                <ul class="navigation clearfix">
-                                    <li><a href="../index.html">Početna</a></li>
-                                    <li><a href="../o-nama/index.html">O nama</a></li>
-                                    <li><a href="../index.html#programs">Usluge</a></li>
-                                    <li class="current"><a href="index.html">Utisci</a></li>
-                                    <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
-                                    <li><a href="../galerija/index.html">Galerija</a></li>
-                                    <li><a href="../index.html#faq">Česta pitanja</a></li>
-                                    <li><a href="../kontakt/index.html">Kontakt</a></li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- End Main Header -->
-
+{% endblock %}
         <!--Page Title-->
-        <section class="page-title" style="background-image:url(../media/img/shutterstock_1981734041.jpg);">
+        <section class="page-title" style="background-image:url(/media/img/shutterstock_1981734041.jpg);">
             <div class="auto-container">
                 <div class="inner-container clearfix">
                     <ul class="bread-crumb clearfix">
-                        <li><a href="../index.html">Početna</a></li>
+                        <li><a href="/">Početna</a></li>
                         <li>Utisci</li>
                     </ul>
                     <h1>Utisci roditelja</h1>
@@ -250,7 +50,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_1.jpg" alt="Aleksandra i beba Pavlina" loading="lazy">
+                            <img src="/media/testimonial/testimonial_1.jpg" alt="Aleksandra i beba Pavlina" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -266,7 +66,7 @@
                      <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_2.1.jpg" alt="Vukasin, Una i deca Stefan (2.5) i Mateja (5)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_2.1.jpg" alt="Vukasin, Una i deca Stefan (2.5) i Mateja (5)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -282,7 +82,7 @@
                              <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_11.1.jpg" alt="Dragutin, Ljubica i beba Andrijana (12 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_11.1.jpg" alt="Dragutin, Ljubica i beba Andrijana (12 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -298,7 +98,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_3.jpg" alt="Roditelji Sara i Miloš i beba Jakov (11 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_3.jpg" alt="Roditelji Sara i Miloš i beba Jakov (11 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -314,7 +114,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_4.jpg" alt="Mama Mila i beba Katarina (14 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_4.jpg" alt="Mama Mila i beba Katarina (14 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -330,7 +130,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_5.jpg" alt="Mama Mirjam i beba Kalina (3.5 meseca)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_5.jpg" alt="Mama Mirjam i beba Kalina (3.5 meseca)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -346,7 +146,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_6.jpg" alt="Mama Jana i beba Teodor (6 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_6.jpg" alt="Mama Jana i beba Teodor (6 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -362,7 +162,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_7.jpg" alt="Mama Katarina i beba Lovre (12 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_7.jpg" alt="Mama Katarina i beba Lovre (12 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -378,7 +178,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_8.jpg" alt="Mama Ivana i beba Mihajlo (2 meseca)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_8.jpg" alt="Mama Ivana i beba Mihajlo (2 meseca)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -394,7 +194,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_9.jpg" alt="Mama Maja i blizanci Lena i Matej (14 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_9.jpg" alt="Mama Maja i blizanci Lena i Matej (14 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -410,7 +210,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_10.jpg" alt="Luka 4 god." loading="lazy">
+                            <img src="/media/testimonial/testimonial_10.jpg" alt="Luka 4 god." loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -426,7 +226,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_12.1.jpg" alt="Tata Marko, Lazar (6 meseci) i Elena (3 godine) " loading="lazy">
+                            <img src="/media/testimonial/testimonial_12.1.jpg" alt="Tata Marko, Lazar (6 meseci) i Elena (3 godine) " loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -442,7 +242,7 @@
                      <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_11.jpg" alt="Beba Tesa 10 meseci, mama Manuela" loading="lazy">
+                            <img src="/media/testimonial/testimonial_11.jpg" alt="Beba Tesa 10 meseci, mama Manuela" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -458,7 +258,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_12.jpg" alt="Mama Barbara i beba Sava (6 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_12.jpg" alt="Mama Barbara i beba Sava (6 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -474,7 +274,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_13.jpg" alt="Marko i Marija i beba Elena (5 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_13.jpg" alt="Marko i Marija i beba Elena (5 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -490,7 +290,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_14.jpg" alt="Vlada, Nevena i beba Saša" loading="lazy">
+                            <img src="/media/testimonial/testimonial_14.jpg" alt="Vlada, Nevena i beba Saša" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -506,7 +306,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_15.jpg" alt="Mama Jovana i beba Petra (6 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_15.jpg" alt="Mama Jovana i beba Petra (6 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -522,7 +322,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_16.jpg" alt="Mama Danijela i dete Nora ( 2 godine)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_16.jpg" alt="Mama Danijela i dete Nora ( 2 godine)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -538,7 +338,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_17.jpg" alt="Mama Ana i beba Filip (13 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_17.jpg" alt="Mama Ana i beba Filip (13 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -554,7 +354,7 @@
                        <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_2.jpg" alt="Mila i dečak Bogdan" loading="lazy">
+                            <img src="/media/testimonial/testimonial_2.jpg" alt="Mila i dečak Bogdan" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -570,7 +370,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_18.jpg" alt="Mama Danijela i beba Mateja (5 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_18.jpg" alt="Mama Danijela i beba Mateja (5 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -586,7 +386,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_19.jpg" alt="Mama Karolina i bliznakinje Mirna i Lina (10 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_19.jpg" alt="Mama Karolina i bliznakinje Mirna i Lina (10 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -602,7 +402,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_20.jpg" alt="Mama Marija i beba Vuk 7 meseci" loading="lazy">
+                            <img src="/media/testimonial/testimonial_20.jpg" alt="Mama Marija i beba Vuk 7 meseci" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -618,7 +418,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_21.jpg" alt="Mama Ana i beba Petra ( mesec dana)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_21.jpg" alt="Mama Ana i beba Petra ( mesec dana)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -634,7 +434,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_22.jpg" alt="Mama Jovana i Naum (14 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_22.jpg" alt="Mama Jovana i Naum (14 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -650,7 +450,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_23.jpg" alt="Mama Stefana i beba Mila (12 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_23.jpg" alt="Mama Stefana i beba Mila (12 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -666,7 +466,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_24.jpg" alt="Mama Marija i beba Naum (8 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_24.jpg" alt="Mama Marija i beba Naum (8 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -682,7 +482,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_25.jpg" alt="Mama Nina i beba Teo 5 meseci" loading="lazy">
+                            <img src="/media/testimonial/testimonial_25.jpg" alt="Mama Nina i beba Teo 5 meseci" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -698,7 +498,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_26.jpg" alt="Mama Marija i beba Angelina (9 meseci)" loading="lazy">
+                            <img src="/media/testimonial/testimonial_26.jpg" alt="Mama Marija i beba Angelina (9 meseci)" loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -714,7 +514,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_27.jpg" alt="Ljubica i beba Andrijana (6 meseci) " loading="lazy">
+                            <img src="/media/testimonial/testimonial_27.jpg" alt="Ljubica i beba Andrijana (6 meseci) " loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -730,7 +530,7 @@
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="card-image">
-                            <img src="../media/testimonial/testimonial_28.jpg" alt="Mama Ana i beba Stefana (1.5 god) " loading="lazy">
+                            <img src="/media/testimonial/testimonial_28.jpg" alt="Mama Ana i beba Stefana (1.5 god) " loading="lazy">
                         </div>
                         <div class="card-content">
                             <div class="quote-icon">❝</div>
@@ -748,140 +548,4 @@
             </div>
         </section>
 
-        <!--Main Footer-->
-        <footer class="main-footer">
-            <div class="anim-icons">
-                <span class="icon icon-sparrow wow zoomIn" data-wow-delay="400ms"></span>
-                <span class="icon icon-rainbow-2 wow zoomIn" data-wow-delay="800ms"></span>
-                <span class="icon icon-star-3"></span>
-                <span class="icon icon-star-3 two"></span>
-                <span class="icon icon-sun"></span>
-                <span class="icon icon-plane wow zoomIn" data-wow-delay="1200ms"></span>
-            </div>
-
-            <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon icon-arrow-up"></span></div>
-
-            <div class="footer-upper">
-                <div class="auto-container">
-                    <div class="row clearfix">
-                        <div class="big-column col-xl-12 col-lg-12 col-md-12 col-sm-12">
-                            <div class="row clearfix">
-                                <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="footer-widget logo-widget">
-                                        <div class="logo">
-                                            <a href="../index.html"><img src="../media/logo-aneta.jpg" alt="BabySleepTeam Logo" /></a>
-                                        </div>
-                                        <div class="text">Dobar san predstavlja osnov psihičkog i fizičkog zdravlja svakog čoveka a naročito beba. Kroz personalizovani rad sa vama i vašim detetom za samo dve nedelje dovodimo spavanje vaše bebe u savršen red.</div>
-                                    </div>
-                                </div>
-
-                                <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="footer-widget links-widget text-center">
-                                        <h4 class="widget-title">Korisni linkovi</h4>
-                                        <div class="widget-content">
-                                            <ul class="list">
-                                                <li><a href="../index.html">Početna</a></li>
-                                                <li><a href="../o-nama/index.html">O nama</a></li>
-                                                <li><a href="../index.html#programs">Usluge</a></li>
-                                                <li><a href="../o-nama/index.html#testimonials">Utisci</a></li>
-                                                <li><a href="../naucni-kutak/index.html">Naučni kutak</a></li>
-                                                <li><a href="../galerija/index.html">Galerija</a></li>
-                                                <li><a href="../index.html#faq">Česta pitanja</a></li>
-                                                <li><a href="../kontakt/index.html">Kontakt</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="footer-column col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                                    <div class="footer-widget contact-widget">
-                                        <h4 class="widget-title">Kontakt</h4>
-                                        <div class="widget-content">
-                                            <ul class="contact-info">
-                                                <li><a href="tel:+381691517080"><span class="fa fa-phone-square"></span>Anđela: +38169 151 70 80</a></li>
-                                                <li><a href="mailto:andjelasleeptrainer@gmail.com"><span class="fa fa-envelope"></span>andjelasleeptrainer@gmail.com</a></li>
-                                            </ul>
-                                        </div>
-                                        <h4 class="widget-title pt-3">Sertifikati</h4>
-                                        <a href="../media/img/andjela-jerini%c4%87-cpd-certificate.png" target="_blank" rel="noopener noreferrer" class="p-3">
-                                            <i class="fa fa-file-pdf fa-2x"></i>
-                                        </a>
-                                        <a href="../media/img/andjela-jerini%c4%87-sleep-nanny-academy-certificate-1.png" target="_blank" rel="noopener noreferrer" class="p-3">
-                                            <i class="fa fa-file-pdf fa-2x"></i>
-                                        </a>
-
-                                        <h4 class="widget-title pt-3">Pravila poslovanja</h4>
-                                        <div class="widget-content">
-                                            <ul class="contact-info">
-                                                <li><a href="../pravila/politika-privatnosti.html">Politika privatnosti</a></li>
-                                                <li><a href="../pravila/uslovi-koriscenja.html">Uslovi korišćenja</a></li>
-                                                <li><a href="../pravila/politika-kolacica.html">Politika kolačića</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="auto-container">
-                    <ul class="social-icon-colored">
-                        <li><a href="https://www.instagram.com/_babysleepteam_" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram"></span></a></li>
-                    </ul>
-                    <div class="copyright">Copyright &copy; 2025 BabySleepTeam</div>
-                </div>
-            </div>
-        </footer>
-        <!--End Main Footer-->
-    </div>
-    <!--End pagewrapper-->
-
-    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
-    <script defer src="../scripts/cookieconsent-config.js"></script>
-
-    <script src="../scripts/jquery3860.js?v=1" defer></script>
-    <script src="../scripts/popper.min3860.js?v=1" defer></script>
-    <script src="../scripts/bootstrap.min3860.js?v=1" defer></script>
-    <script src="../scripts/owl3860.js?v=1" defer></script>
-    <script src="../scripts/testimonial-modal.js" defer></script>
-    <script src="../scripts/wow3860.js?v=1" defer></script>
-    <script src="../scripts/appear3860.js?v=1" defer></script>
-    <script src="../scripts/parallax.min3860.js?v=1" defer></script>
-    <script src="../scripts/script3860.js?v=1" defer></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
-            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-                new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-
-            var scrollToTopBtn = document.querySelector('.scroll-to-top');
-            if (scrollToTopBtn) {
-                window.addEventListener('scroll', function () {
-                    if (window.pageYOffset > 300) {
-                        scrollToTopBtn.style.display = 'block';
-                        scrollToTopBtn.classList.add('open');
-                    } else {
-                        scrollToTopBtn.style.display = 'none';
-                        scrollToTopBtn.classList.remove('open');
-                    }
-                });
-
-                scrollToTopBtn.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            }
-        });
-    </script>
-</body>
-
-</html>
-
+<script src="{{ '/scripts/testimonial-modal.js' | cacheBust }}"></script>

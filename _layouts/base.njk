@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }} | BabySleepTeam</title>
+
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="author" content="BabySleepTeam - Anđela Jerinić" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    {% if image %}
+    <link rel="preload" href="{{ image }}" as="image">
+    {% endif %}
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/bootstrap3860.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/settings3860.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/layers3860.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="/css/navigation3860.css" media="print" onload="this.media='all'">
+    
+    <!-- Custom CSS with Cache Busting -->
+    <link rel="stylesheet" href="{{ '/css/style3860.css' | cacheBust }}">
+    <link rel="stylesheet" href="{{ '/css/responsive3860.css' | cacheBust }}">
+    
+    <!-- Page-specific CSS -->
+    {% if pageCss %}
+    <link rel="stylesheet" href="{{ ('/css/' + pageCss) | cacheBust }}">
+    {% endif %}
+    
+    <link rel="stylesheet" href="/css/owl.css" media="print" onload="this.media='all'">
+
+    <!-- Cookie Consent CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.css"
+        media="print" onload="this.media='all'">
+
+    <link rel="icon" href="/media/logo-aneta.jpg" type="image/jpeg">
+    <link rel="canonical" href="{{ page.url | url }}" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }} | BabySleepTeam" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:url" content="https://babysleepteam.rs{{ page.url }}" />
+    <meta property="og:image" content="{{ og_image | default('https://babysleepteam.rs/media/4.png') }}" />
+    <meta property="og:locale" content="sr_RS" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ title }} | BabySleepTeam" />
+    <meta name="twitter:description" content="{{ description }}" />
+    <meta name="twitter:image" content="{{ og_image | default('https://babysleepteam.rs/media/4.png') }}" />
+
+    {% block head %}{% endblock %}
+
+</head>
+
+<body>
+
+    <h1 style="position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden;">
+        {{ hidden_h1 | default('BabySleepTeam | Program spavanja za bebe i decu') }}
+    </h1>
+
+    <div class="page-wrapper">
+        
+        {% include "header.njk" %}
+
+        {{ content | safe }}
+
+        {% include "footer.njk" %}
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!-- Core Scripts - jQuery must load first -->
+    <script src="/scripts/jquery3860.js"></script>
+    <script src="/scripts/popper.min3860.js"></script>
+    <script src="/scripts/bootstrap.min3860.js"></script>
+    <script src="/scripts/jquery-ui3860.js"></script>
+    <script src="/scripts/jquery.fancybox3860.js"></script>
+    
+    <!-- Revolution Slider Core -->
+    <script src="/scripts/jquery.themepunch.revolution.min3860.js"></script>
+    <script src="/scripts/jquery.themepunch.tools.min3860.js"></script>
+    
+    <!-- Revolution Slider Extensions -->
+    <script src="/scripts/revolution.extension.actions.min3860.js"></script>
+    <script src="/scripts/revolution.extension.carousel.min3860.js"></script>
+    <script src="/scripts/revolution.extension.kenburn.min3860.js"></script>
+    <script src="/scripts/revolution.extension.layeranimation.min3860.js"></script>
+    <script src="/scripts/revolution.extension.migration.min3860.js"></script>
+    <script src="/scripts/revolution.extension.navigation.min3860.js"></script>
+    <script src="/scripts/revolution.extension.parallax.min3860.js"></script>
+    <script src="/scripts/revolution.extension.slideanims.min3860.js"></script>
+    <script src="/scripts/revolution.extension.video.min3860.js"></script>
+    <script src="/scripts/main-slider-script3860.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="{{ '/scripts/script3860.js' | cacheBust }}"></script>
+    <script src="/scripts/appear3860.js"></script>
+    <script src="/scripts/wow3860.js"></script>
+    <script src="/scripts/parallax.min3860.js"></script>
+    
+    <!-- Other Plugins -->
+    <script src="/scripts/owl3860.js"></script>
+    
+    <!-- Cookie Consent -->
+    <script defer src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+    <script defer src="/scripts/cookieconsent-config.js"></script>
+
+    <!-- Initialize Bootstrap Tooltips & Scroll-to-Top -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize all tooltips
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'));
+            tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+                     new bootstrap.Tooltip(tooltipTriggerEl);
+                }
+            });
+
+            // Scroll to top button
+            var scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (scrollToTopBtn) {
+                // Show/hide on scroll
+                window.addEventListener('scroll', function () {
+                    if (window.pageYOffset > 300) {
+                        scrollToTopBtn.style.display = 'block';
+                        scrollToTopBtn.classList.add('open');
+                    } else {
+                        scrollToTopBtn.style.display = 'none';
+                        scrollToTopBtn.classList.remove('open');
+                    }
+                });
+
+                // Click to scroll to top
+                scrollToTopBtn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

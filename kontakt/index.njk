@@ -1,0 +1,329 @@
+---
+layout: base.njk
+title: Kontakt
+description: Kontaktirajte BabySleepTeam - sertifikovane savetnike za spavanje. Pošaljite nam poruku ili nas pozovite na +38169 151 70 80. Odgovaramo u roku od 24h.
+keywords: kontakt BabySleepTeam, zakazivanje konsultacija, sleep trening Srbija, bebe spavanje konsultacije
+---
+
+{% block head %}
+    <!-- Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://babysleepteam.rs/#organization",
+          "name": "BabySleepTeam",
+          "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+          "url": "https://babysleepteam.rs/",
+          "telephone": "+381691517080",
+          "email": "andjelasleeptrainer@gmail.com",
+          "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Belgrade",
+            "addressCountry": "RS"
+          },
+          "areaServed": "Worldwide",
+          "sameAs": [
+            "https://www.instagram.com/_babysleepteam_"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+381691517080",
+            "contactType": "customer support",
+            "areaServed": "Worldwide",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://babysleepteam.rs/#website",
+          "url": "https://babysleepteam.rs/",
+          "name": "BabySleepTeam",
+          "inLanguage": "sr-RS",
+          "publisher": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://babysleepteam.rs/#sleep-training-service",
+          "name": "Program spavanja za bebe i decu",
+          "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+          "provider": {
+            "@id": "https://babysleepteam.rs/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": "Baby sleep consulting and online sleep training programs",
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "serviceUrl": "https://babysleepteam.rs/kontakt/",
+            "availableLanguage": [
+              "sr-RS"
+            ]
+          }
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://babysleepteam.rs/kontakt/#webpage",
+          "url": "https://babysleepteam.rs/kontakt/",
+          "name": "Kontakt | BabySleepTeam",
+          "description": "Kontaktirajte BabySleepTeam - sertifikovane savetnike za spavanje. Pošaljite nam poruku ili nas pozovite na +38169 151 70 80. Odgovaramo u roku od 24h.",
+          "inLanguage": "sr-RS",
+          "isPartOf": {
+            "@id": "https://babysleepteam.rs/#website"
+          },
+          "about": {
+            "@id": "https://babysleepteam.rs/#sleep-training-service"
+          },
+          "mainEntity": {
+            "@id": "https://babysleepteam.rs/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+{% endblock %}
+
+        <!--Page Title-->
+        <section class="page-title" style="background-image:url(/media/img/shutterstock_1981734041.jpg);">
+            <div class="auto-container">
+                <div class="inner-container clearfix">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="/">Početna</a></li>
+                        <li>Kontakt</li>
+                    </ul>
+                    <h1>Kontakt</h1>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+        <!-- Contact Map Section -->
+        <section class="contact-map-section">
+            <div class="row no-gutters">
+                <div class="info-box col-md-6 col-sm-12">
+                    <h4><a href="mailto:andjelasleeptrainer@gmail.com">andjelasleeptrainer@gmail.com</a></h4>
+                </div>
+                <div class="info-box col-md-6 col-sm-12">
+                    <h4><a href="tel:+381691517080">Anđela: +38169 151 70 80</a></h4>
+                </div>
+            </div>
+        </section>
+        <!-- End Map Section -->
+
+        <section class="contact-form-section">
+            <div class="auto-container">
+                <div class="contact-form" id="form-container">
+                    <div class="sec-title text-center">
+                        <span class="title">Javite nam se!</span>
+                        <h2 id="contact-anchor">Pošaljite svoj upit</h2>
+                    </div>
+                    
+                    <!-- Error Message Area -->
+                    <div id="form-error" style="display: none; background: #fee; border-left: 4px solid #e53e3e; padding: 15px 20px; margin-bottom: 25px; border-radius: 8px;">
+                        <p style="color: #c53030; margin: 0; font-size: 15px; line-height: 1.5;">
+                            <strong>⚠️ Greška:</strong> <span id="error-message"></span>
+                        </p>
+                    </div>
+                    
+                    <form action="{{ page.url | url }}" enctype="multipart/form-data" id="contact-form"
+                        method="post">
+                        <div class="row">
+
+                            <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                <input id="FullName" name="FullName" placeholder="Ime i prezime" required="required"
+                                    type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                <input id="Email" name="Email" placeholder="Email" required="required" type="email"
+                                    value="" />
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                <input id="PhoneNumber" name="PhoneNumber" placeholder="Kontakt telefon"
+                                    required="required" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-lg-6 col-md-12 col-sm-12">
+                                <input id="Subject" name="Subject" placeholder="Naslov" required="required" type="text" value="" />
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                <textarea cols="20" id="Message" name="Message" placeholder="Vaša poruka..."
+                                    required="required" rows="2"></textarea>
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                                <div class="cf-turnstile" data-sitekey="0x4AAAAAACAPgsD5F8VJWoHS" data-callback="onTurnstileSuccess"></div>
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                                <button class="theme-btn btn-style-one" type="submit" name="submit-form" id="submit-btn" disabled>Pošalji
+                                    poruku</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Success Message (Hidden by default) -->
+                <div id="success-message" style="display: none;">
+                    <div style="max-width: 600px; margin: 0 auto; text-align: center; padding: 60px 20px;">
+                        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <h2 style="color: #2d3748; font-size: 32px; margin-bottom: 15px; font-weight: 600;">Uspešno poslato!</h2>
+                        <p style="color: #718096; font-size: 18px; line-height: 1.6; margin-bottom: 30px;">Hvala vam što ste nas kontaktirali. Vaša poruka je uspešno primljena i odgovorićemo vam u najkraćem mogućem roku.</p>
+                        <div style="background: #f7fafc; border-left: 4px solid #667eea; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                            <p style="color: #4a5568; font-size: 16px; margin: 0; line-height: 1.5;">
+                                <strong style="color: #2d3748;">📧 Očekujte odgovor:</strong><br>
+                                Obično odgovaramo u roku od 6-12 sati radnim danima.
+                            </p>
+                        </div>
+                        <button onclick="window.location.href='/'" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 15px 40px; font-size: 16px; border-radius: 30px; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.5)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)'">
+                            Nazad na početnu
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            let turnstileToken = null;
+
+            // Show error message
+            function showError(message) {
+                const errorDiv = document.getElementById('form-error');
+                const errorMsg = document.getElementById('error-message');
+                errorMsg.textContent = message;
+                errorDiv.style.display = 'block';
+                errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            // Hide error message
+            function hideError() {
+                document.getElementById('form-error').style.display = 'none';
+            }
+
+            // Validate form fields
+            function validateForm(form) {
+                if (!form.FullName.value.trim()) {
+                    showError('Molimo unesite ime i prezime.');
+                    return false;
+                }
+                if (!form.Email.value.trim()) {
+                    showError('Molimo unesite email adresu.');
+                    return false;
+                }
+                // Basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(form.Email.value.trim())) {
+                    showError('Molimo unesite validnu email adresu.');
+                    return false;
+                }
+                if (!form.PhoneNumber.value.trim()) {
+                    showError('Molimo unesite kontakt telefon.');
+                    return false;
+                }
+                if (!form.Subject.value.trim()) {
+                    showError('Molimo unesite naslov.');
+                    return false;
+                }
+                if (!form.Message.value.trim()) {
+                    showError('Molimo unesite vašu poruku.');
+                    return false;
+                }
+                return true;
+            }
+
+
+            // Turnstile callback
+            function onTurnstileSuccess(token) {
+                turnstileToken = token;
+                document.getElementById('submit-btn').disabled = false;
+            }
+
+            // Wait for DOM to be ready
+            document.addEventListener('DOMContentLoaded', function() {
+                const contactForm = document.getElementById('contact-form');
+                if (!contactForm) {
+                    return;
+                }
+
+                contactForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+                    hideError();
+
+                    const form = e.target;
+                    const submitBtn = document.getElementById('submit-btn');
+
+                    // Validate form
+                    if (!validateForm(form)) {
+                        return;
+                    }
+
+                    // Check if turnstile token exists
+                    if (!turnstileToken) {
+                        showError('Molimo vas da završite CAPTCHA proveru.');
+                        return;
+                    }
+
+                    // Disable submit button
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = 'Šaljem...';
+
+                    const formData = {
+                        name: form.FullName.value.trim(),
+                        email: form.Email.value.trim(),
+                        phone: form.PhoneNumber.value.trim(),
+                        title: form.Subject.value.trim(),
+                        message: form.Message.value.trim(),
+                    };
+
+                    try {
+                        const response = await fetch('https://gtnqidketpracvcfsrcr.supabase.co/functions/v1/cloudflare-turnstile', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd0bnFpZGtldHByYWN2Y2ZzcmNyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI3OTg2MTIsImV4cCI6MjA3ODM3NDYxMn0.29TlwOrN9p15XwmT_8yv8GZYIN50y6dht_LO1Xy_Nds'
+                            },
+                            body: JSON.stringify({
+                                token: turnstileToken,
+                                formData: formData
+                            })
+                        });
+                        const result = await response.json();
+
+                        if (result.success) {
+                            // Hide form and show success message
+                            document.getElementById('form-container').style.display = 'none';
+                            document.getElementById('success-message').style.display = 'block';
+                            
+                            // Scroll to success message
+                            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            
+                            form.reset();
+                            turnstileToken = null;
+                        } else {
+                            showError(result.message || 'Došlo je do greške. Pokušajte ponovo.');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Pošalji poruku';
+                        }
+                    } catch (error) {
+                        showError('Došlo je do greške prilikom slanja poruke. Proverite internet konekciju.');
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = 'Pošalji poruku';
+                    }
+                });
+            });
+        </script>

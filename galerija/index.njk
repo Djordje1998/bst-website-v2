@@ -1,0 +1,121 @@
+﻿---
+layout: base.njk
+title: Galerija
+description: Pogledajte našu galeriju zadovoljnih beba i roditelja. BabySleepTeam - sertifikovani savetnici za spavanje pomažu bebama i roditeljima širom Srbije.
+keywords: galerija BabySleepTeam, zadovoljni roditelji, utisci, sertifikovani savetnik za spavanje
+---
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://babysleepteam.rs/#organization",
+      "name": "BabySleepTeam",
+      "description": "Stručni program spavanja za bebe i decu od 0 do 7 godina. Personalizovani pristup i naučno dokazane metode.",
+      "url": "https://babysleepteam.rs/",
+      "telephone": "+381691517080",
+      "email": "andjelasleeptrainer@gmail.com",
+      "image": "https://babysleepteam.rs/media/logo-aneta.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Belgrade",
+        "addressCountry": "RS"
+      },
+      "areaServed": "Worldwide",
+      "sameAs": ["https://www.instagram.com/_babysleepteam_"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+381691517080",
+        "contactType": "customer support",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["sr-RS"]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://babysleepteam.rs/#website",
+      "url": "https://babysleepteam.rs/",
+      "name": "BabySleepTeam",
+      "inLanguage": "sr-RS",
+      "publisher": {"@id": "https://babysleepteam.rs/#organization"}
+    },
+    {
+      "@type": "Service",
+      "@id": "https://babysleepteam.rs/#sleep-training-service",
+      "name": "Program spavanja za bebe i decu",
+      "description": "Online i personalizovani programi spavanja za bebe i decu od 0 do 7 godina.",
+      "provider": {"@id": "https://babysleepteam.rs/#organization"},
+      "areaServed": "Worldwide",
+      "serviceType": "Baby sleep consulting and online sleep training programs",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://babysleepteam.rs/galerija/",
+        "availableLanguage": ["sr-RS"]
+      }
+    },
+    {
+      "@type": "ImageGallery",
+      "@id": "https://babysleepteam.rs/galerija/#webpage",
+      "url": "https://babysleepteam.rs/galerija/",
+      "name": "Galerija | BabySleepTeam",
+      "description": "Pogledajte našu galeriju zadovoljnih beba i roditelja.",
+      "inLanguage": "sr-RS",
+      "isPartOf": {"@id": "https://babysleepteam.rs/#website"},
+      "about": {"@id": "https://babysleepteam.rs/#sleep-training-service"},
+      "provider": {"@id": "https://babysleepteam.rs/#organization"}
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/media/img/shutterstock_1981734041.jpg);">
+    <div class="auto-container">
+        <div class="inner-container clearfix">
+            <ul class="bread-crumb clearfix">
+                <li><a href="/">Početna</a></li>
+                <li>Galerija</li>
+            </ul>
+            <h1>Galerija</h1>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+<!-- Gallery Section -->
+<section class="gallery-section style-two">
+    <div class="auto-container">
+        <div class="row">
+            {% set galleryImages = [
+                "2025-06-11_ce2f7asdf9f4.jpg", "2025-06-11_ce2f79f4.jpg", "2025-06-11_ce2f7a9f4.jpg",
+                "2025-06-11_ce2f79f4ad.jpg", "2025-06-11_ce2f79asdff4.jpg", "2025-06-11_ce2fadd79f4.jpg",
+                "2025-06-11_ce2dddf79f4.jpg", "2025-06-11_ce2f7ddd9f4.jpg",
+                "screenshot-2023-02-18-at-14-53-14.png", "screenshot-2023-02-18-at-14-58-29.png",
+                "screenshot-2023-02-18-at-14-52-54.png", "screenshot-2023-02-18-at-14-53-03.png",
+                "screenshot-2023-02-18-at-14-59-11.png", "screenshot-2023-02-19-at-13-34-59.png",
+                "screenshot-2023-02-19-at-13-35-12.png", "screenshot-2023-02-19-at-13-35-22.png",
+                "screenshot-2023-02-19-at-14-27-31.png", "screenshot-2023-02-19-at-14-26-34.png",
+                "screenshot-2023-02-27-at-14-35-14.png", "screenshot-2023-02-27-at-14-42-45.png",
+                "screenshot-2023-02-27-at-14-43-28.png", "screenshot-2023-02-27-at-14-45-04.png",
+                "screenshot-2023-03-03-at-12-25-06.png", "screenshot-2023-03-03-at-12-26-08.png",
+                "screenshot-2023-05-26-at-20-37-25.png", "screenshot-2023-05-26-at-20-41-49.png"
+            ] %}
+            {% for image in galleryImages %}
+            <div class="gallery-item col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="800ms">
+                <div class="image-box">
+                    <figure class="image">
+                        <img src="/media/gallery/{{ image }}" alt="BabySleepTeam Gallery" loading="lazy">
+                    </figure>
+                    <div class="author-signature"></div>
+                    <div class="overlay-box"><a href="/media/gallery/{{ image }}" class="lightbox-image" data-fancybox='gallery'><span class="icon flaticon-add"></span></a></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!--End Gallery Section -->
